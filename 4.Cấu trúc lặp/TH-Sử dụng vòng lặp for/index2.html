@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let sum = 0;
+        let n, i;
+        n = +prompt("Hay nhap vao so nguyen n");
+
+        for (i = 0; i <= n; i++) {
+            sum = sum + i;
+        }
+        document.getElementById("demo").innerHTML = "Tong cua " + n
+            + " so tu nhien lien tiep la: " + sum;
+    </script>
+</body>
+
+</html>
