@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="baitap1.css">;
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <th><input id="money" type="text" value="1"></th>
+            <th><select id="tienGoc">
+                    <option value="VND">VietNamDong</option>
+                    <option value="USD">USD</option>
+
+                </select></th>
+            <th><select id="tienSau">
+                    <option id="tienSau" value="USD1">USD</option>
+                    <option id="tienSau" value="VND1">VietNamDong</option>
+                </select></th>
+            <td>
+                <button style=background-color:blue id="Convert" onclick="myFun()">Convert</button>
+            </td>
+        </tr>
+        <tr>
+            <td style=color:indigo colspan="4" id="demo">Result:</td>
+        </tr>
+    </table>
+    <script>
+        let x,y;
+        x = document.getElementById("tienGoc")
+        y = document.getElementById("tienSau")
+        function myFun() {
+            z = document.getElementById("money").value
+            switch (x.value) {
+                case "VND":
+                    switch (y.value) {
+                        case "VND1":
+                            document.getElementById("demo").innerHTML = "Result:" + z + " VND"
+                            break;
+                        case "USD1":
+                            document.getElementById("demo").innerHTML = "Result:" + z / 23000 + " USD"
+                            break;
+                    }
+                    break;
+                //Tai sao khong co dong nay thi sai
+                case "USD": {
+                    switch (y.value) {
+                        case "USD1":
+                            document.getElementById("demo").innerHTML = "Result:" + z + " USD"
+                            break;
+                        case "VND1":
+                            document.getElementById("demo").innerHTML = "Result:" + z * 23000 + " USD"
+                            break;
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
