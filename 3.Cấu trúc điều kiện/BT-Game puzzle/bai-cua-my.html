@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Puzzle</title>
+</head>
+<style>
+    body{
+        text-align: center;
+       
+    }
+    img{
+        width: 720px;
+        height: 150px;
+        
+    }
+</style>
+<body id='success' style="background-color:white">
+        <img src="images/one1.jpg" alt="one1" id="one1" onclick="clickOne()"><br>
+        <img src="images/two1.jpg" alt="two1" id="two1" onclick="clickTwo()"><br>
+        <img src="images/three1.jpg" alt="three1" id="three1" onclick="clickThree()"><br>
+       
+</body>
+<script>
+let one = document.getElementById('one1');
+let two = document.getElementById('two1');
+let three = document.getElementById('three1');
+function clickOne(){
+    let hamRandom = Math.floor((Math.random() * 3) + 1);
+    switch(hamRandom){
+        case 1:
+            one.src = 'images/one1.jpg'
+            one.alt = '1'
+            break;
+        case 2:
+            one.src = 'images/two1.jpg'
+            one.alt = '2'
+            break;
+        case 3:
+            one.src = 'images/three1.jpg'
+            one.alt = '3'
+            break;
+    }
+    finish()
+}
+function clickTwo(){
+    let hamRandom = Math.floor((Math.random() * 3) + 1);
+    switch(hamRandom){
+        case 1:
+            two.src = 'images/one2.jpg'
+            two.alt = '1'
+            break;
+        case 2:
+            two.src = 'images/two2.jpg'
+            two.alt = '2'
+            break;
+        case 3:
+            two.src = 'images/three2.jpg'
+            two.alt = '3'
+            break;
+    }
+    finish()
+}
+function clickThree(){
+    let hamRandom = Math.floor((Math.random() * 3) + 1);
+    switch(hamRandom){
+        case 1:
+            three.src = 'images/one3.jpg';
+            three.alt = '1';
+            break;
+        case 2:
+            three.src = 'images/two3.jpg';
+            three.alt = '2';
+            break;
+        case 3:
+            three.src = 'images/three3.jpg';
+            three.alt = '3';
+            break;
+    }
+    finish()
+    
+}
+function checkWin() {
+    return one.alt + two.alt + three.alt === '111'|| one.alt + two.alt + three.alt === '222'||one.alt + two.alt + three.alt === '333'
+}
+function finish(){
+    if(checkWin()) {
+        document.getElementById('success').style= "background-color:yellow"
+    }
+    else{
+        document.getElementById('success').style= "background-color:write"
+}
+}
+</script>
+</html>
