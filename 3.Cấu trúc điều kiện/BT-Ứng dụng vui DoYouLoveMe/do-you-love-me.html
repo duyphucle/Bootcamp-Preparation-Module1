@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #_Q0_C1 {
+            position: absolute;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h2>Do YOU LOVE ME</h2>
+    <button type="button" onclick="loveMe(1)">Có</button>
+    <button position: absolute id="_Q0_C1" type="button" onmouseover="loveMe(2)">NO</button>
+    <script>
+
+        function loveMe(a) {
+            let c = Math.floor(Math.random() * (window.innerHeight - 1 + 1)) + 1;
+            let b = Math.floor(Math.random() * (window.innerWidth - 1 + 1)) + 1;
+            if (a == 1) {
+                alert("Yêu anh là đúng rồi");
+            }
+            else if (a == 2) {
+                b = b + "px";
+                c = c + "px";
+               let  d = document.getElementById("_Q0_C1")
+                d.style.left = b;
+                d.style.top = c;
+            }
+        }
+    </script>
+</body>
+
+</html>
