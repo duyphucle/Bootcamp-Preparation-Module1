@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let thang_g;
+    let l_suat;
+    let money=100;
+    let money0=money;
+   
+    do{
+        thang_g= prompt("Nhap vao su thang gui:");
+       
+    }
+    while(isNaN(thang_g)||thang_g<=0);
+    do{
+        l_suat= prompt("Nhap vao lai suat:%/thang","0.03");
+
+    }
+    while(isNaN(thang_g)||thang_g<=0);
+    for(let i=1;i<=thang_g;i++){
+        money=money+money*l_suat;
+        
+    }
+    alert("Sau " + thang_g  + " thang.Voi so tien ban dau la:" + money0 +
+     "VND.\nSo tien thanh: " + money+" VND");
+</script>    
+
+</html>
