@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let cNang, cCao;
+        do {
+            cNang = prompt("Nhap can nang cua ban theo kg");
+        }
+        while (isNaN(cNang) || cNang < 0)
+        do {
+            cCao = parseFloat(prompt("Nhap chieu cao cua ban theo m"));
+            //value của prompt mặc định là string.  
+        }
+        while (isNaN(cCao) || cCao < 0)
+        let bmi = cNang / (cCao * cCao);
+
+        if (bmi < 18)
+            document.write("Chi so can nang cua ban la:" + bmi.toFixed(1) + " Ban :Kha Gay");
+        else if (bmi < 25.0)
+            document.write("Chi so can nang cua ban la:" + bmi.toFixed(1) + " Ban :Binh Thuong");
+        else if (bmi < 30.0)
+            document.write("Chi so can nang cua ban la:" + bmi.toFixed(1) + " Ban :Kha Map Roi Day");
+        else
+            document.write("Chi so can nang cua ban la:" + bmi.toFixed(1) + " Ban :Map Nhu Heo");
+    </script>
+</body>
+
+</html>
