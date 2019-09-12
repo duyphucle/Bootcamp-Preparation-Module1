@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let bKinh;
+    do {
+      bKinh = prompt("Nhap ban kinh r");
+    }
+    while (bKinh <= 0 || isNaN(bKinh));
+    let cVi = 2 * bKinh * Math.PI;
+    document.write('Chu vi hinh tron ban kinh la ' + cVi.toFixed(2));
+    //Nếu không khai báo let là kiểu float không dùng toFixed được
+  </script>
+</body>
+
+</html>

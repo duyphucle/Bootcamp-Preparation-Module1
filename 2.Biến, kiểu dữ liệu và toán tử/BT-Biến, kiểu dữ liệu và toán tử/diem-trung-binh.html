@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let diem_Vl, diem_Hoa, diem_Sinh;
+    do {
+      diem_Vl = parseFloat(prompt("Nhap diem mon vat ly"));
+      //value của prompt mặc định là string.  
+    }
+    while (isNaN(diem_Vl) || diem_Vl < 0.0 || diem_Vl > 10.0);
+    do {
+      diem_Hoa = parseFloat(prompt("Nhap diem mon Hoa hoc"));
+    }
+    while (isNaN(diem_Hoa) || diem_Hoa < 0.0 || diem_Hoa > 10.0)
+    do {
+      diem_Sinh = parseFloat(prompt("Nhap diem mon Sinh hoc"));
+    }
+    while (isNaN(diem_Sinh) || diem_Sinh < 0.0 || diem_Sinh > 10.0)
+    let diem_Tb = (diem_Vl + diem_Hoa + diem_Sinh) / 3;
+    document.write("Điểm trung bình của ba môn là " + diem_Tb.toFixed(1))
+  </script>
+</body>
+
+</html>
