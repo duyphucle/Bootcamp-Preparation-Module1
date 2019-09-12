@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="demo"></div>
+    <script>
+        let table1 = "<table border='1' width='300' cellspacing='1px' cellpadding='6px' style='solid'>";
+        for (let i = 1; i <= 10; i++) {
+            table1 = table1 + "<tr>";
+            for (let j = 1; j <= 10; j++) {
+                table1 += "<td>" + i * j + "</td>";
+            }
+            table1 = table1 + "</tr>";
+        }
+        table1 = table1 + "</table>";
+        console.log(table1);
+        document.getElementById("demo").innerHTML = table1;
+    </script>
+</body>
+
+</html>
