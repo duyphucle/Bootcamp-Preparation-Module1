@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="name.css" />
+
+</head>
+
+<body>
+    <table style="position:absolute;left:500px; top:100px;border: 4px solid rgb(14, 26, 2);width: 200px;height:300px;">
+        <tr>
+            <td colspan="4">
+                <input class="show" id="ketqua" type="text" />
+
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" class="num" value="1" onclick="ketqua.value+=this.value"></td>
+            <td><input type="button" class="num" value="2" onclick="ketqua.value+=this.value"></td>
+            <td><input type="button" class="num" value="3" onclick="ketqua.value+=this.value"></td>
+
+            <td><input type="button" class="num" value="+" onclick="ketqua.value+=this.value"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" class="num" value="4" onclick="ketqua.value+=this.value"></td>
+            <td><input type="button" class="num" value="5" onclick="ketqua.value+=this.value"></td>
+            <td><input type="button" class="num" value="6" onclick="ketqua.value+=this.value"></td>
+            <td><input type="button" class="num" value="-" onclick="ketqua.value+=this.value"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="num" value="7" onclick="ketqua.value+=this.value"></td>
+            <td><input type="button" class="num" value="8" onclick="ketqua.value+=this.value"></td>
+            <td><input type="button" class="num" value="9" onclick="ketqua.value+=this.value"></td>
+            <td><input type="button" class="num" value="*" onclick="ketqua.value+=this.value"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="num" value="C" onclick="ketqua.value=''"></td>
+            <td><input type="button" class="num" value="0" onclick="ketqua.value+=this.value"></td>
+            <td><input type="button" class="num" value="=" onclick="ketqua.value=eval(ketqua.value)"></td>
+            <td><input type="button" class="num" value="/" onclick="ketqua.value+=this.value"></td>
+        </tr>
+    </table>
+
+</body>
+
+<script>
+    document.getElementById("ketqua").innerHTML
+</script>
+
+</html>
