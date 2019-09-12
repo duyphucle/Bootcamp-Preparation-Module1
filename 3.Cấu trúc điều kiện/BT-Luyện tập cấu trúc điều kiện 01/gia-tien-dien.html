@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let a,x;
+    do{
+    a= +prompt("Nhap so dien nha ban thang nay");
+    }
+    while( isNaN(a)||(a<0));
+    if (a<50){
+        x=a*1678;
+    }
+    else if (a>50 && a<101){
+        x=50*1678 +(a -50)*1734;
+    }
+    else if (a>100 && a<201){
+        x=50*1678 + 50*1734 +(a-100)*2014;
+    }
+    else if (a>200 && a<301){
+       x= 50*1678 + 50*1734 +100*2014 +(a-200)*2534;
+    }
+    else if (a>300 && a<401){
+       x= 50*1678 + 50*1734 +100*2014 +100*2534+(a-300)*2834;
+    }
+    else{
+        x= 50*1678 + 50*1734 +100*2014 +100*2534+300*2834+(a-400)*2927;
+    }
+    alert("Thang nay ban dung het: "+ a +"kWh. Het "+x +"VND")
+</script>   
+</body>
+</html>

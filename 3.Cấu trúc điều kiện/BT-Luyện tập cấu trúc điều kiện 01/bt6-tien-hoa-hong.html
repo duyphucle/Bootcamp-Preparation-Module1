@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    do{
+        a=+ prompt("Vui long nhap doanh thu thang nay");
+    }
+    while (isNaN(a)||(a<0));
+    
+    if (a==0){
+        alert("Khong ban duoc hang lay dau ra doanh thu");
+    }
+   else if (a<10000000){
+        alert("Doanh thu cua ban la:"+a +"Hoa hong 10% doanh thu: "+ a/10);
+    } 
+    else if (a<20000000 && a>=10000000)
+    {
+        alert("Doanh thu cua ban la:"+a +"Hoa hong 15% doanh thu: "+ 0.15*a);       
+    } 
+    else {
+        alert("Doanh thu cua ban la:"+a +"Hoa hong 25% doanh thu: "+ 0.25*a);
+    }
+</script>
+</body>
+</html>

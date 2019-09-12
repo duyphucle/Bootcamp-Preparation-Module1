@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a, b;
+        do {
+            a = +prompt("Vui long nhap so a:");
+        }
+        while (isNaN(a) || a < 0 || !Number.isInteger(a));
+        do {
+            b = +prompt("Vui long nhap so b:");
+        }
+        while (isNaN(b) || b < 0 || !Number.isInteger(b));
+        if (a % b == 0) {
+            alert(a + " Chia het cho " + b);
+        }
+        else {
+            alert(a + " Khong chia het cho " + b);
+        }
+    </script>
+
+</body>
+
+</html>

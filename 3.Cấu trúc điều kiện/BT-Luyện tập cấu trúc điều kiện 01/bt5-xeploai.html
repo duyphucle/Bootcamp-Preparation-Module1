@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a,b,c,d,e;
+        do {
+            a = parseFloat(prompt("Vui long nhap bai kt vat ly so 1:"));
+        }
+        while (isNaN(a) || a > 10 || a < 0);
+        do {
+            b = parseFloat(prompt("Vui long nhap bai kt vat ly so 2:"));
+        }
+        while (isNaN(b) || b > 10 || b < 0);
+        do {
+            c = parseFloat(prompt("Vui long nhap bai kt vat ly so 3:"));
+        }
+        while (isNaN(c) || c > 10 || c < 0);
+        do {
+            d = parseFloat(prompt("Vui long nhap bai kt vat giua ky:"));
+        }
+        while (isNaN(d) || d > 10 || d < 0);
+        do {
+            e = parseFloat(prompt("Vui long nhap bai kt vat ly cuoi ky:"));
+        }
+        while (isNaN(e) || e > 10 || e < 0);
+        let dtb = (a + b + c + 2 * d + 5 * e) / 10;
+        alert("Diem Trung Binh Mon Vat Ly cua ban la:" + dtb.toFixed(1));
+        if (dtb >= 8.0)
+            alert("Ban hoc gioi mon Vat LY");
+        else if (dtb >= 6.5 && dtb < 8.0)
+            alert("Ban hoc kha mon Vat Ly");
+        else if (dtb >= 5.0 && dtb < 6.5)
+            alert("Ban hoc trung binh mon nay");
+        else
+            alert("Ban nen xem lai nang luc hoc cua minh");
+    </script>
+</body>
+</body>
+
+</html>

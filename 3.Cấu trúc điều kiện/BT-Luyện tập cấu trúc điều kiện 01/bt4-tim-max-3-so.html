@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a, b, c;
+        do {
+            a = parseInt(prompt("Vui Long Nhap So a:"));
+        }
+        while (isNaN(a) || !Number.isInteger(a));
+        do {
+            b = parseInt(prompt("Vui Long Nhap So b:"));
+        }
+        while (isNaN(b) || !Number.isInteger(b));
+        do {
+            c = parseInt(prompt("Vui Long Nhap So c:"));
+        }
+        while (isNaN(c) || !Number.isInteger(c));
+        let max = a;
+        if (c >= b && c > max) max = c;
+        if (b >= c && b > max) max = b;
+        alert(max);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let tuoi, c;
+        do {
+            tuoi = +prompt("Hay nhap vao tuoi cua ban:");
+        }
+        while (isNaN(tuoi) || tuoi < 0 || !Number.isInteger(tuoi));
+        c = tuoi < 15 ? alert("Chua len duoc lop 10 dau nha chau") :
+            alert("Vao hoc lop 10 di mai khai giang roi"); 
+    </script>
+</body>
+
+</html>
