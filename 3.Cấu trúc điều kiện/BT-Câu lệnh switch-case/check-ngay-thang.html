@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><input type="text" id="soThang1"> </td>
+            <td><input type="button" value="Tính số ngày" onclick="myFun(1)"> </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p id="demo1">Thang</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Và</p>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" id="soThang2"> </td>
+            <td><input type="button" value="Tính số ngày" onclick="myFun(2)"> </td>
+
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p id="demo2">Thang</p>
+            </td>
+        </tr>
+    </table>
+    <script>
+
+        let s1, s2;
+
+        s1 = document.getElementById("soThang1");
+        s2 = document.getElementById("soThang2");
+
+        function myFun(a) {
+            if (a == 1) {
+                switch (parseInt(s1.value)) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        document.getElementById("demo1").innerHTML = "Thang " + s1.value + " co 31 ngay";
+                        break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        document.getElementById("demo1").innerHTML = "Thang " + s1.value + " co 30 ngay";
+                        break;
+                    case 2:
+                        document.getElementById("demo1").innerHTML = "Thang " + s1.value + " co 28 ngay";
+                        break;
+
+                    //
+                }
+            }
+            else {
+                switch (parseInt(s2.value)) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        document.getElementById("demo2").innerHTML = "Thang " + s1.value + " co 31 ngay";
+                        break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        document.getElementById("demo2").innerHTML = "Thang " + s1.value + " co 30 ngay";
+                        break;
+                    case 2:
+                        document.getElementById("demo2").innerHTML = "Thang " + s1.value + " co 28 ngay";
+                        break;
+
+                    //
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
