@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  let year=0;;
+        do {
+            year = +prompt("Hay nhap mot nam bat ky");
+        }
+        while (isNaN(year) || !Number.isInteger(year))
+
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    alert(year + " la nam Nhuan");
+                }
+                else {
+                    alert(year + " Khong phai la nam Nhuan");
+                }
+            }
+            else {
+                alert(year + " La nam nhuan");
+            }
+        }
+        else {
+            alert(year + " Khong phai la nam nhuan");
+        }
+
+    </script>
+</body>
+
+</html>
