@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" id="fast" onchange="myFun(0)">FAST<br>
+    <input type="checkbox" id="good" onclick="myFun(1)">GOOD<br>
+    <input type="checkbox" id="cheap" onclick="myFun(2)">CHEAP<br>
+</body>
+<script>
+    function myFun(c) {
+        let x = document.getElementById("fast").checked;
+        let y = document.getElementById("good").checked;
+        let z = document.getElementById("cheap").checked;
+        switch (c) {
+            case 0:
+                if (y == true && z == true)
+                    document.getElementById("good").checked = false;
+                break;
+            case 1:
+                if (z == true && x == true)
+                    document.getElementById("cheap").checked = false;
+                break;
+            case 2:
+                if (y == true && x == true)
+                    document.getElementById("fast").checked = false;
+                break;
+        }
+    }
+</script>
+
+</html>
