@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="so"></p>
+    <p id="sum"></p>
+    <script>
+        let txt, sum, b, a;
+        text = ""
+        sum = 0;
+        b = 0;
+        do {
+            a = + prompt("Hay nhap vao so a");
+            if (a != -1) {
+                b = a;
+                sum = sum + a;
+                text = text + b + " ";
+            }
+        }
+        while (a != -1);
+        document.getElementById("sum").innerHTML = "Tong la: " + sum;
+        document.getElementById("so").innerHTML = text;
+
+    </script>
+</body>
+
+</html>
