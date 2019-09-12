@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a, b, c;
+        do {
+            a = +prompt("Hay nhap so bat dau");
+        }
+        while (isNaN(a));
+        do {
+            b = +prompt("Hay nhap so ket thuc");
+        }
+        while (isNaN(b));
+
+
+        c = Math.floor(Math.random() * (b - a)) + a;
+        alert(c);
+        let e = "";
+        let count = 0;
+        do {
+            d = +prompt("Hay nhap vao so muon kiem tra");
+        }
+        while (isNaN(d));
+
+        if (c == d) alert("Ban that may man");
+        else alert("Chia buon ban");
+        while (c != d) {
+            d = + prompt("Hay nhap vao so muon kiem tra");
+            if (c == d) {
+                alert("Ban that may man");
+                // e = "Ban that may man"
+                break;
+            }
+            else {
+                alert("Chia buon ban");
+                count++;
+            }
+            if (count === 2) {
+                alert("Ban da dung het 3 luot")
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
