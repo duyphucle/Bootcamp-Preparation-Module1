@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-<script>
-    let cDai,cRong;
-    do {
-        cDai =parseFloat(prompt("Hay nhap vao chieu dai a:"));
-    }
-    while (isNaN(cDai) || cDai < 0);
-    do {
-        cRong =parseFloat(prompt("Hay nhap vao chieu rong b:"));
-    }
-    while (isNaN(cRong) || cRong < 0); 
-    alert("Dien tich hinh chu nhat:dai"+cDai+" rong " +cRong+"="+cDai*cRong)   
-</script>
+    <script>
+        let cDai, cRong;
+        do {
+            cDai = parseFloat(prompt("Hay nhap vao chieu dai a:"));
+        }
+        while (isNaN(cDai) || cDai < 0);
+        do {
+            cRong = parseFloat(prompt("Hay nhap vao chieu rong b:"));
+        }
+        while (isNaN(cRong) || cRong < 0);
+        alert("Dien tich hinh chu nhat:dai" + cDai + " rong " + cRong + "=" + cDai * cRong)   
+    </script>
 </body>
+
 </html>
