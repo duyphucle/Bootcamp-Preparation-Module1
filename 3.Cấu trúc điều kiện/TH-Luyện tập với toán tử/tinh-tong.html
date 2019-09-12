@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let soA, soB;
+    do {
+      soA = parseInt(prompt("Nhap so a"));
+    }
+    while (isNaN(soA))
+    do {
+      soB = parseInt(prompt("Nhap so b"));
+    }
+    while (isNaN(soB))
+    //Cach1
+    // if (a+b<4){
+    //   alert("Below")
+    // }
+    // else{  
+    //   alert("Over")
+    // }
+
+    //Cach2
+    let soC = (soA + soB < 4) ? "Below" : "Over";
+    alert(soC);
+  </script>
+</body>
+
+</html>
