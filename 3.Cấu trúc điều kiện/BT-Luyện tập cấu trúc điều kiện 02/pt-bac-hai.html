@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a, b, c, d;
+        alert("Giai Phuong trinh ax^2 +bx+c=0, DK a,b khac 0")
+        do {
+            a = parseFloat(prompt("Hay nhap vao so a:"));
+        }
+        while (isNaN(a) || a == 0);
+        do {
+            b = parseFloat(prompt("Hay nhap vao so b:"));
+        }
+        while (isNaN(b) || b == 0);
+        do {
+            c = parseFloat(prompt("Hay nhap vao so c:"));
+        }
+        while (isNaN(c));
+        d = b * b - 4 * a * c;
+        let x1;
+        let x2;
+        if (d > 0) {
+            x1 = (-b + Math.sqrt(d)) / (2 * a);
+            x2 = (-b - Math.sqrt(d)) / (2 * a);
+            alert("Phuong trinh co 2 nghiem x1,x2=" + x1.toFixed(2) + "va " + x2.toFixed(2));
+        }
+        else if (d == 0) {
+            x1 = -b / 2 / a;
+            alert("Phuong trinh co 1 nghiem x=" + x1);
+        }
+        else {
+            alert("Phuong trinh vo nghiem");
+        }
+//chua xong
+    </script>
+</body>
+
+</html>

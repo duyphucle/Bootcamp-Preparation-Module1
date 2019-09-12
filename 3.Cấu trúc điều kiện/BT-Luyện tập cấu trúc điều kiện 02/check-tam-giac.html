@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a, b, c, t;
+        do {
+            a = parseFloat(prompt("Hay nhap vao so a"));
+        }
+
+        while (isNaN(a));
+
+        do {
+            b = parseFloat(prompt("Hay nhap vao so b"));
+        }
+        while (isNaN(b));
+        do {
+            c = parseFloat(prompt("Hay nhap vao so c"));
+        }
+        while (isNaN(c));
+        if (a + b > c) t = 1;
+        if (b + c > a) t = 2;
+        if (a + c > b) t = 3;
+        if (((a > 0) && (b > 0) && (c > 0)) && (t == 1 || t == 2 || t == 3)) {
+            alert(a + "va" + b + "va" + c + " la 3 canh cua mot tam giac");
+        }
+
+        else {
+            alert(a + "va" + b + "va" + c + " khong la 3 canh cua mot tam giac");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Phương trình bậc nhất ax +b=0;</p>
+<script>
+     do {
+        a =parseFloat(prompt("Hay nhap vao so a:"));
+    }
+    while (isNaN(a));
+    do {
+        b = parseFloat(prompt("Hay nhap vao so b:"));
+    }
+    while (isNaN(b)); 
+    if (a==0){
+        if (b==0){
+            alert("Phuong trinh vo so nghiem");
+        }
+        else
+            alert("Phuong trinh vo nghiem");
+    }
+    else {
+        alert("Phuong trinh co 1 nghiem x=: " + -b/a);
+    }
+</script>
+</body>
+</html>
