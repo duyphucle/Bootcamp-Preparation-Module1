@@ -41,8 +41,6 @@
         }
         txt += "</table>";
         document.getElementById("demo").innerHTML = txt;
-
-
         function taoMang(i, j) {
             if (document.getElementById(i + "_" + j).innerText != "X" && document.getElementById(i + "_" + j).innerText != "0") {
                 if (t == 0) {
@@ -55,32 +53,62 @@
                     t = 0;
                 }
             }
-            for (i = 0; i < 20; i++) {
-                for (j = 0; j < 20; j++) {
-                    let c0 = j;
-                    let c1 = j + 1;
-                    let c2 = j + 2;
-                    let c3 = j + 3;
-                    let c4 = j + 4;
-                    if (document.getElementById(i + "_" + c0).innerText +
-                        document.getElementById(i + "_" + c3).innerText +
-                        document.getElementById(i + "_" + c1).innerText +
-                        document.getElementById(i + "_" + c2).innerText
-                        == "XXXX") {
-                        alert("You Win");
-                        break;
-                    }
-                    else if (document.getElementById(i + "_" + c0).innerText +
-                        document.getElementById(i + "_" + c3).innerText +
-                        document.getElementById(i + "_" + c1).innerText +
-                        document.getElementById(i + "_" + c2).innerText
-                        == "0000") {
-                        alert("You Lose")
-                        break;
-                    }
+            ////////////DOc
+            let r0, r1, r2, r3, r4, ii;
+            let c0, c1, c2, c3, c4, jj;
+            let c1lui, c2lui, c3lui, c4lui, c0lui;
+            for (jj = 0; jj <= 20; jj++) {
+                //c0:Theo cot
+                //r0:theo hang
+                let tt;
+                let cc;
+
+                c0 = jj;
+                c0lui = jj;
+
+                c1lui = c0lui - 1;
+                c2lui = c0lui - 2;
+                c3lui = c0lui - 3;
+                c4lui = c0lui - 4;
+                c1 = c0 + 1;
+                c2 = c0 + 2;
+                c3 = c0 + 3;
+                c4 = c0 + 4;
+                if (document.getElementById(i + "_" + c0).innerText +
+                    document.getElementById(i + "_" + c1).innerText +
+                    document.getElementById(i + "_" + c2).innerText +
+                    document.getElementById(i + "_" + c3).innerText +
+                    document.getElementById(i + "_" + c4).innerText == "XXXXX")
+                    alert("Ban thang");
+                for (tt = 0; tt <= 15; tt++) {
+                    if (document.getElementById(tt + "_" + c0).innerText +
+                        document.getElementById(tt + 1 + "_" + c1).innerText +
+                        document.getElementById(tt + 2 + "_" + c2).innerText +
+                        document.getElementById(tt + 3 + "_" + c3).innerText +
+                        document.getElementById(tt + 4 + "_" + c4).innerText == "XXXXX")
+                        alert("Ban thang");
                 }
+                //     for ( cc=1;cc<20;cc++){
+                // if (document.getElementById(cc+"_5").innerText +
+                //     document.getElementById(cc+1+"_4").innerText +
+                //     document.getElementById(cc+2+"_3").innerText +
+                //     document.getElementById(cc+3+"_2").innerText +
+                //     document.getElementById(cc+4+"_1").innerText == "XXXXX")
+                //     alert("Ban thang");
+                //     }
+
+                if (document.getElementById(c0 + "_" + j).innerText +
+                    document.getElementById(c1 + "_" + j).innerText +
+                    document.getElementById(c2 + "_" + j).innerText +
+                    document.getElementById(c3 + "_" + j).innerText +
+                    document.getElementById(c4 + "_" + j).innerText == "XXXXX")
+                    alert("Ban thang");
+
+
+
             }
         }
+
     </script>
 </body>
 
