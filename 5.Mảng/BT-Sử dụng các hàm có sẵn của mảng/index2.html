@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr, numA;
+        do {
+            numA = prompt("Nhap vao so can kiem tra");
+            arr = Array.from(numA);
+        }
+        while (isNaN(numA));
+        let arr1 = [];
+        for (let i = 0; i < arr.length; i++) {
+            parseInt(arr[i]);
+            if (arr[i] % 2 == 0 && arr[i + 1] % 2 == 0) {
+                // arr1=arr.splice(i,0,"i","-");
+                arr1.push(arr[i]);
+                arr1.push("-");
+            }
+            else
+                // arr1=arr.splice(i,0,"i")
+                arr1.push(arr[i]);
+        }
+        alert(arr1);
+    </script>
+</body>
+
+</html>

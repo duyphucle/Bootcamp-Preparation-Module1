@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <body>
+
+
+
+        <script>
+            str = prompt("Hay nhap vao chuoi");
+            var txt = "";
+
+            for (i = 0; i < str.length; i++) {
+                n = str.charCodeAt(i);
+                // alert(n)
+                n = parseInt(n)
+                if (n < 90 && n > 32) {
+                    n = n + 32;
+                    txt += String.fromCharCode(n);
+                }
+                else if (n == 32)
+                    txt += " ";
+                else {
+                    n = n - 32
+                    txt += String.fromCharCode(n);
+                }
+            }
+            //xu ly phuc tap them neu muon :(( 
+            alert("Chuoi da cho la:" + str);
+            alert("Chuoi chuyen thanh la:" + txt);
+        </script>
+
+    </body>
+
+    </html>
+
+</body>
+
+</html>
