@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    td {
+        height: 20px;
+        width: 20px;
+        padding: 0;
+        border: 1px solid black;
+    }
+
+    table {
+        border-collapse: collapse;
+        background-color: darkcyan;
+    }
+</style>
+
+<body>
+    <p id="demo"></p>
+    <td onclick="taoMang()"></td>
+    <script>
+        let t = 0;
+        let a = [];
+        let txt = "<table>";
+        let i;
+        for (i = 0; i < 20; i++) {
+            txt += "<tr>"
+            a[i] = [];
+            for (j = 0; j < 20; j++) {
+                a[i, j] = -1;
+                txt += "<td id='" + i + "_" + j + "' onclick='taoMang(" + i + "," + j + ")'></td>";
+            }
+            txt += "</tr>";
+
+        }
+        txt += "</table>";
+        document.getElementById("demo").innerHTML = txt;
+
+
+        function taoMang(i, j) {
+            if (document.getElementById(i + "_" + j).innerText != "X" && document.getElementById(i + "_" + j).innerText != "0") {
+                if (t == 0) {
+
+                    document.getElementById(i + "_" + j).innerText = "X";
+                    t = 1;
+                }
+                else {
+                    document.getElementById(i + "_" + j).innerText = "0";
+                    t = 0;
+                }
+            }
+            for (i = 0; i < 20; i++) {
+                for (j = 0; j < 20; j++) {
+                    let c0 = j;
+                    let c1 = j + 1;
+                    let c2 = j + 2;
+                    let c3 = j + 3;
+                    let c4 = j + 4;
+                    if (document.getElementById(i + "_" + c0).innerText +
+                        document.getElementById(i + "_" + c3).innerText +
+                        document.getElementById(i + "_" + c1).innerText +
+                        document.getElementById(i + "_" + c2).innerText
+                        == "XXXX") {
+                        alert("You Win");
+                        break;
+                    }
+                    else if (document.getElementById(i + "_" + c0).innerText +
+                        document.getElementById(i + "_" + c3).innerText +
+                        document.getElementById(i + "_" + c1).innerText +
+                        document.getElementById(i + "_" + c2).innerText
+                        == "0000") {
+                        alert("You Lose")
+                        break;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
