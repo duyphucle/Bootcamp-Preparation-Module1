@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let k;
+        let x, v;
+        let arr = [];
+        taoArr_so_nguyen();
+        Nhap_n_nguyen();
+        if (checkTrung(arr, y) == 1)
+            alert("V is in the array");
+        else
+            alert("V is not in the array");
+        function taoArr_so_nguyen() {
+            for (i = 0; i < 4; i++) {
+                do {
+                    x = prompt("Nhap vao phan tu arr: " + i);
+                    y = parseFloat(x);
+                }
+                while (isNaN(x) || !Number.isInteger(y));
+                arr.push(y);
+            }
+
+        }
+        function Nhap_n_nguyen() {
+            do {
+                k = prompt("Nhap vao so muon kiem tra");
+                y = parseFloat(k);
+            }
+            while (isNaN(k) || !Number.isInteger(y));
+
+        }
+        function checkTrung(arr, x) {
+            for (let i = 0; i < arr.length; i++) {
+                if (x == arr[i]) return 1;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let k;
+        let newarr1, newarr2, newarr3;
+        let x, v;
+        let arr = [];
+        taoArr_so_nguyen();
+        Nhap_n_nguyen();
+        document.write("Mang da cho la:" + arr)
+        let vitri = checkTrung(arr, y);
+        document.write("</br>So da nhap la :" + y)
+        document.write("</br>Vi tri cat la:" + vitri)
+        newarr1 = arr.slice(0, vitri);
+        newarr2 = arr.slice(vitri + 1)
+        newarr3 = newarr1.concat(newarr2, 0)
+        document.write("</br>Mang moi la :" + newarr3)
+        function taoArr_so_nguyen() {
+            for (i = 0; i < 10; i++) {
+                do {
+                    x = prompt("Nhap vao phan tu arr: " + i);
+                    y = parseFloat(x);
+                }
+                while (isNaN(x) || !Number.isInteger(y));
+                arr.push(y);
+            }
+
+        }
+        function Nhap_n_nguyen() {
+            do {
+                k = prompt("Nhap vao so muon kiem tra");
+                y = parseFloat(k);
+            }
+            while (isNaN(k) || !Number.isInteger(y));
+            return y;
+
+        }
+        function checkTrung(arr, x) {
+            for (let i = 0; i < arr.length; i++) {
+                if (x == arr[i])
+                    return i;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

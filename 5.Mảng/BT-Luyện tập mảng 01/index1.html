@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x;
+        let arr = [];
+    
+      
+        taoArr_so_nguyen();
+        check(arr);
+        function taoArr_so_nguyen() {
+            for (i = 0; i < 4; i++) {
+                do {
+                    x = prompt("Nhap vao phan tu arr: " + i);
+                    y = parseFloat(x);
+                }
+                while (isNaN(x) || !Number.isInteger(y));
+                arr.push(y);
+          
+            } 
+          
+        }
+        function check(arr){
+            let count=0;
+            for ( let i=0;i<arr.length;i++){
+                if(arr[i]>=10)
+                    count++;
+            }
+                alert("Có " + count + " phan tu lon hơn 10");
+        }
+    </script>
+</body>
+
+</html>

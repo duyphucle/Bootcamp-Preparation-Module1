@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x;
+        let arr1 = [];
+        let arr2 = [];
+        let arr3 = [];
+        taoArr_so_nguyen(arr1);
+        confirm("Ban muon nhap tiep mang thu hai")
+        taoArr_so_nguyen(arr2);
+        arr3 = arr1.concat(arr2);
+        document.write("Mang thu nhat la:" + arr1)
+        document.write("</br>Mang thu hai la:" + arr2)
+        document.write("</br>Mang thu ba la:" + arr3)
+
+        function taoArr_so_nguyen(arr) {
+            for (i = 0; i < 10; i++) {
+                do {
+                    x = prompt("Nhap vao phan tu arr: " + i);
+                    y = parseFloat(x);
+                }
+                while (isNaN(x) || !Number.isInteger(y));
+                arr.push(y);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

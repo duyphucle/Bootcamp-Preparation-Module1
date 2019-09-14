@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x;
+        let arr = [];
+
+
+
+        taoArr_so_nguyen_khong_trung();
+        findMax();
+        function taoArr_so_nguyen_khong_trung() {
+            for (i = 0; i < 10; i++) {
+                do {
+                    x = prompt("Nhap vao phan tu thu: " + i);
+                    while (check_phan_tu_trung(arr, x) == 1) {
+                        x = prompt("Nhap vao phan tu thu: " + i);
+                    }
+                    y = parseFloat(x);
+                }
+                while (isNaN(x) || !Number.isInteger(y));
+
+                arr.push(y);
+            }
+
+        }
+
+        function check_phan_tu_trung(arr, k) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == k)
+                    return 1;
+            }
+            return 0;
+        }
+
+
+        function findMax() {
+            let t = 0;;
+            let max = arr[0];
+            for (let j = 0; j < arr.length; j++)
+                if (arr[j] > max) {
+                    t = j;
+                    max = arr[j];
+                }
+            document.write("mang la:" + arr + "</br>");
+            document.write("Vi tri max la: " + t + "</br>Gia tri max= " + max);
+        }
+        function checkTrung(arr, x) {
+            for (let i = 0; i < arr.length; i++) {
+                if (x == arr[i] || x == "") return 1;
+            }
+            return 0;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = [];
+        a.length = 10;
+        let i = 0;
+
+        tao_Mang();
+        findMax_tb();
+        function tao_Mang() {
+            do {
+                a[i] = +prompt("Nhap vao phan tu nguyen thu " + i);
+                i++;
+                if (i == a.length) break;
+            }
+            while (isNaN(a) || !Number.isInteger(a));
+        }
+        function findMax_tb() {
+            let t = 0;;
+            let max = a[0];
+            for (let j = 0; j < a.length; j++) {
+                t += a[j];
+                if (a[j] > max) {
+
+                    max = a[j];
+                }
+            }
+            document.write("mang la:" + a + "</br>")
+            document.write("</br>Gia tri max= " + max)
+            document.write("</br>Gia trung binh la = " + t / a.length)
+        }
+    </script>
+</body>
+
+</html>
