@@ -97,26 +97,27 @@
 
         const HEIGHT_SCRREN_MIN = 150;
         const HEIGHT_SCRREN_MAX = 440;
-
-        function draw() {
-            // ctx.clearRect(0, 0, 1368, 1000)
+        function drawCircle(tron) {
             ctx.beginPath();
-            ctx.arc(tron1.x, tron1.y, tron1.r, 0, 2 * Math.PI);
-            ctx.arc(tron2.x, tron2.y, tron2.r, 0, 2 * Math.PI);
-            ctx.arc(tron3.x, tron3.y, tron3.r, 0, 2 * Math.PI);
-            ctx.arc(tron4.x, tron4.y, tron4.r, 0, 2 * Math.PI);
-            ctx.arc(tron5.x, tron5.y, tron5.r, 0, 2 * Math.PI);
-            ctx.arc(tron6.x, tron6.y, tron6.r, 0, 2 * Math.PI);
-            ctx.arc(tron7.x, tron7.y, tron7.r, 0, 2 * Math.PI);
-            ctx.arc(tron8.x, tron8.y, tron8.r, 0, 2 * Math.PI);
-            ctx.arc(tron9.x, tron9.y, tron9.r, 0, 2 * Math.PI);
-            ctx.arc(tron10.x, tron10.y, tron10.r, 0, 2 * Math.PI);
-            ctx.arc(tron11.x, tron11.y, tron11.r, 0, 2 * Math.PI);
-            ctx.arc(tron12.x, tron12.y, tron12.r, 0, 2 * Math.PI);
+            ctx.arc(tron.x, tron.y, tron.r, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        function draw() {
+            drawCircle(tron1)
+            drawCircle(tron2)
+            drawCircle(tron3)
+            drawCircle(tron4)
+            drawCircle(tron5)
+            drawCircle(tron6)
+            drawCircle(tron7)
+            drawCircle(tron8)
+            drawCircle(tron9)
+            drawCircle(tron10)
+            drawCircle(tron11)
+            drawCircle(tron12)
 
-            //  ctx.fill();
-            ctx.stroke();
-            ctx.closePath()
+       
+
             updatePositon(tron1);
             updatePositon(tron2);
             updatePositon(tron3);

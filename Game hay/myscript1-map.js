@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <script type="text/javascript">
-        var ctx = null;
+var ctx = null;
         var gameMap = [
             0,0,0,0,0,0,0,0,1,1,0,0,0,0,
             0,0,0,0,0,0,0,0,1,1,0,0,0,0,
@@ -21,7 +16,7 @@
         var mapW = 14, mapH = 11;
         window.onload = function () {
             ctx = document.getElementById('game').getContext("2d");
-            requestAnimationFrame(drawGame);
+            // requestAnimationFrame(drawGame);
         };
         function drawGame() {
             if (ctx == null) { return; }
@@ -44,26 +39,9 @@
                 }
             }
             ctx.fillStyle = "red";
-            draw()
-            requestAnimationFrame(drawGame);
+            // draw()
+            // requestAnimationFrame(drawGame);
         }  
-        var r = 15;
-        var a1 = 220;
-        var b1 = 150;
-        const HEIGHT_SCRREN_MIN = 150;
-        const HEIGHT_SCRREN_MAX = 440;
-        function draw() {   
-            ctx.beginPath();
-            ctx.arc(tron1.x, tron1.y, tron1.r, 0, 2 * Math.PI);
-            ctx.stroke();
-            ctx.closePath()
-            updatePositon(tron1);
-        }   
-    </script>
-</head>
+         
 
-<body>
-    <canvas id="game" width="950" height="700"></canvas>
-</body>
-
-</html>
+        // drawGame();

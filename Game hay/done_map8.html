@@ -1,3 +1,4 @@
+<!-- Xay dung tron3 di chuyen nguoc lai de tag do kho -->
 <!DOCTYPE html>
 <html>
 
@@ -58,14 +59,14 @@
         var b1 = 20
         var a2 = 140
         var b2 = 60
-        var a3 = 260
-        var b3 = 20     
+        var a3 = 380
+        var b3 = 20
 
 
         var tron1 = new hinhTron(a1, b1, r);
         var tron2 = new hinhTron(a2, b2, r, 1);
         var tron3 = new hinhTron(a3, b3, r, 1);
-      
+
 
 
 
@@ -79,25 +80,28 @@
         const HEIGHT_SCRREN_MIN2 = 60;
         const HEIGHT_SCRREN_MAX2 = 340;
 
-        const WIDTH_SCRREN_MIN3 = 140;
+        const WIDTH_SCRREN_MIN3 = 260;
         const WIDTH_SCRREN_MAX3 = 380;
-        const HEIGHT_SCRREN_MIN3 = 260;
+        const HEIGHT_SCRREN_MIN3 = 20;
         const HEIGHT_SCRREN_MAX3 = 140;
-
+        function drawCircle(tron,a) {
+            ctx.beginPath();
+            ctx.arc(tron.x, a, tron.r, 0, 2 * Math.PI);
+            ctx.fill();
+        }
 
         function draw() {
-
-            ctx.beginPath();
-            ctx.arc(tron1.x, tron1.y, tron1.r, 0, 2 * Math.PI);
-            ctx.arc(tron1.x, 120 + tron1.y, tron1.r, 0, 2 * Math.PI);
-            ctx.arc(tron1.x, 240 + tron1.y, tron1.r, 0, 2 * Math.PI);
-            ctx.arc(tron2.x, tron2.y, tron2.r, 0, 2 * Math.PI);
-            ctx.arc(tron3.x, tron3.y, tron3.r, 0, 2 * Math.PI);
-            ctx.stroke();
-            ctx.closePath()
-           // updatePositon(tron1);
-            //updatePositon1(tron2);
- updatePositon2(tron3);
+            drawCircle(tron1,tron1.y)
+            drawCircle(tron1,120+tron1.y)
+            drawCircle(tron1,240+tron1.y)
+            drawCircle(tron2,tron2.y)
+            drawCircle(tron3,tron3.y)
+            drawCircle(tron3,120+tron3.y)
+            drawCircle(tron3,240+tron3.y)
+           
+            updatePositon(tron1);
+            updatePositon1(tron2);
+            updatePositon2(tron3);
 
 
         }
@@ -171,18 +175,16 @@
                 tron1.direction = 4;
             }
             if (tron1.direction == 1) {
-                tron1.y += tron1.speed;
-            }
-            else if (tron1.direction == 2) {
                 tron1.x += tron1.speed;
             }
-
+            else if (tron1.direction == 2) {
+                tron1.y -= tron1.speed;
+            }
             else if (tron1.direction == 3)
-            tron1.y -= tron1.speed;
+                tron1.x -= tron1.speed;
 
             else if (tron1.direction == 4)
-            tron1.x -= tron1.speed;
-
+                tron1.y += tron1.speed;
         }
         function random(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
