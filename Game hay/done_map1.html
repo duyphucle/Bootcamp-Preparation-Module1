@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+      var ctx = null;
+      var gameMap = [
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2, 1, 1, 1, 0, 0,
+          0, 0, 1, 1, 1, 0, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 0, 1, 1, 1, 0, 0,
+          0, 0, 1, 1, 1, 0, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 0, 1, 1, 1, 0, 0,
+          0, 0, 1, 1, 1, 0, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 0, 1, 1, 1, 0, 0,
+          0, 0, 1, 1, 1, 0, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 0, 1, 1, 1, 0, 0,
+          0, 0, 1, 1, 1, 0, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 0, 1, 1, 1, 0, 0,
+          0, 0, 1, 1, 1, 0, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 0, 1, 1, 1, 0, 0,
+          0, 0, 1, 1, 1, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      ];
+      var tileW = 40, tileH = 40;
+      var mapW = 22, mapH = 14;
+      window.onload = function () {
+          ctx = document.getElementById('game').getContext("2d");
+          requestAnimationFrame(drawGame);
+      };
+      function drawGame() {
+          if (ctx == null) { return; }
+          for (var y = 0; y < mapH; ++y) {
+              for (var x = 0; x < mapW; ++x) {
+                  switch (gameMap[((y * mapW) + x)]) {
+                      case 1:
+                          ctx.fillStyle = "#33ff33";
+                          break;
+                      case 3:
+                          ctx.fillStyle = "#c2d6d6";
+                          break;
+                      case 2:
+                          ctx.fillStyle = "#ffffff";
+                          break;
+                      default:
+                          ctx.fillStyle = "#b3f0ff";
+                  }
+                  ctx.fillRect(x * tileW, y * tileH, tileW, tileH);
+              }
+          }
+          ctx.fillStyle = "red";
+          draw()
+          requestAnimationFrame(drawGame);
+      }
+      function hinhTron(x, y, r) {
+          this.x = x;
+          this.y = y;
+          this.r = r;
+          this.speed = 5;
+          this.direction = true;
+      }
+      var r = 15;
+      var a1 = 250
+      var b1 = 260
+      var a2 = 250
+      var b2 = 340
+      var a3 = 640
+      var b3 = 295
+      var a4 = 640
+      var b4 = 217
+      var tron1 = new hinhTron(a1, b1, r);
+      var tron2 = new hinhTron(a2, b2, r);
+      var tron3 = new hinhTron(a3, b3, r);
+      var tron4 = new hinhTron(a4, b4, r);
+      const WIDTH_SCRREN_MIN = 250;
+      const WIDTH_SCRREN_MAX = 640;
+      
+      function draw() {
+          // ctx.clearRect(0, 0, 1368, 1000)
+          ctx.beginPath();
+          ctx.arc(tron1.x, tron1.y, tron1.r, 0, 2 * Math.PI);
+          ctx.arc(tron2.x, tron2.y, tron2.r, 0, 2 * Math.PI);
+          ctx.arc(tron3.x, tron3.y, tron3.r, 0, 2 * Math.PI);
+          ctx.arc(tron3.x, tron3.y, tron3.r, 0, 2 * Math.PI);
+          ctx.arc(tron4.x, tron4.y, tron4.r, 0, 2 * Math.PI);
+       //  ctx.fill();
+          ctx.stroke();
+          ctx.closePath()
+          updatePositon(tron1);
+          updatePositon(tron2);
+          updatePositon(tron3);
+          updatePositon(tron4);
+          // requestAnimationFrame(draw);
+      }
+      // draw()
+      function updatePositon(tron1) {
+          if ((tron1.x + tron1.r) >= WIDTH_SCRREN_MAX) {
+              tron1.direction = false;
+          }
+          if ((tron1.x - tron1.r) <= WIDTH_SCRREN_MIN) {
+              tron1.direction = true;
+              //tron1.x để bóng di chuyển trái qua phải/ phải qua trái
+              //(tron1.x - tron1.r: vị trí trung tâm bóng + bán kính của nó)
+          }
+          if (tron1.direction) {
+              tron1.x += tron1.speed;
+          } else {
+              tron1.x -= tron1.speed;
+          }
+      }
+      function random(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+  </script>
+</head>
+<body>
+  <canvas id="game" width="850" height="500"></canvas>
+</body>
+</html>

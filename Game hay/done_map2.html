@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        var ctx = null;
+        var gameMap = [
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 0, 0, 0, 0, 0,
+            0, 0, 1, 1, 1, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 1, 1, 1, 0, 0,
+            0, 0, 1, 1, 1, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 1, 1, 1, 0, 0,
+            0, 0, 0, 0, 0, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        ];
+        var tileW = 40, tileH = 40;
+        var mapW = 22, mapH = 14;
+        window.onload = function () {
+            ctx = document.getElementById('game').getContext("2d");
+            requestAnimationFrame(drawGame);
+        };
+        function drawGame() {
+            if (ctx == null) { return; }
+            for (var y = 0; y < mapH; ++y) {
+                for (var x = 0; x < mapW; ++x) {
+                    switch (gameMap[((y * mapW) + x)]) {
+                        case 1:
+                            ctx.fillStyle = "#33ff33";
+                            break;
+                        case 3:
+                            ctx.fillStyle = "#c2d6d6";
+                            break;
+                        case 2:
+                            ctx.fillStyle = "#ffffff";
+                            break;
+                        default:
+                            ctx.fillStyle = "#b3f0ff";
+                    }
+                    ctx.fillRect(x * tileW, y * tileH, tileW, tileH);
+                }
+            }
+            ctx.fillStyle = "red";
+            draw()
+            requestAnimationFrame(drawGame);
+        }
+        function hinhTron(x, y, r) {
+            this.x = x;
+            this.y = y;
+            this.r = r;
+            this.speed = 5;
+            this.direction = true;
+        }
+        var r = 15;
+        var a1 = 220;
+        var b1 = 150;
+        var a2 = 300;
+        var b2 = 150;
+        var a3 = 380;
+        var b3 = 150;
+        var a4 = 460;
+        var b4 = 150;
+        var a5 = 540;
+        var b5 = 150;
+        var a6 = 620;
+        var b6 = 150;
+        var a7 = 260;
+        var b7 = 440;
+        var a8 = 340;
+        var b8 = 440;
+        var a9 = 420;
+        var b9 = 440;
+        var a10 = 500;
+        var b10 = 440;
+        var a11 = 580;
+        var b11 = 440;
+        var a12 = 660;
+        var b12 = 440;
+        var tron1 = new hinhTron(a1, b1, r);
+         var tron2 = new hinhTron(a2, b2, r);
+        var tron3 = new hinhTron(a3, b3, r);
+         var tron4 = new hinhTron(a4, b4, r);
+        var tron5 = new hinhTron(a5, b5, r);
+        var tron6 = new hinhTron(a6, b6, r);
+        var tron7 = new hinhTron(a7, b7, r);
+         var tron8 = new hinhTron(a8, b8, r);
+         var tron9 = new hinhTron(a9, b9, r);
+         var tron10 = new hinhTron(a10, b10, r);
+         var tron11 = new hinhTron(a11, b11, r);
+         var tron12 = new hinhTron(a12, b12, r);
+
+        const HEIGHT_SCRREN_MIN = 150;
+        const HEIGHT_SCRREN_MAX = 440;
+
+        function draw() {
+            // ctx.clearRect(0, 0, 1368, 1000)
+            ctx.beginPath();
+            ctx.arc(tron1.x, tron1.y, tron1.r, 0, 2 * Math.PI);
+            ctx.arc(tron2.x, tron2.y, tron2.r, 0, 2 * Math.PI);
+            ctx.arc(tron3.x, tron3.y, tron3.r, 0, 2 * Math.PI);
+            ctx.arc(tron4.x, tron4.y, tron4.r, 0, 2 * Math.PI);
+            ctx.arc(tron5.x, tron5.y, tron5.r, 0, 2 * Math.PI);
+            ctx.arc(tron6.x, tron6.y, tron6.r, 0, 2 * Math.PI);
+            ctx.arc(tron7.x, tron7.y, tron7.r, 0, 2 * Math.PI);
+            ctx.arc(tron8.x, tron8.y, tron8.r, 0, 2 * Math.PI);
+            ctx.arc(tron9.x, tron9.y, tron9.r, 0, 2 * Math.PI);
+            ctx.arc(tron10.x, tron10.y, tron10.r, 0, 2 * Math.PI);
+            ctx.arc(tron11.x, tron11.y, tron11.r, 0, 2 * Math.PI);
+            ctx.arc(tron12.x, tron12.y, tron12.r, 0, 2 * Math.PI);
+
+            //  ctx.fill();
+            ctx.stroke();
+            ctx.closePath()
+            updatePositon(tron1);
+            updatePositon(tron2);
+            updatePositon(tron3);
+             updatePositon(tron4);
+             updatePositon(tron5);
+            updatePositon(tron6);
+            updatePositon(tron7);
+            updatePositon(tron8);
+            updatePositon(tron9);
+            updatePositon(tron10);
+            updatePositon(tron11);
+            updatePositon(tron12);
+
+            // requestAnimationFrame(draw);
+        }
+        // draw()
+        function updatePositon(tron1) {
+            if ((tron1.y + tron1.r) >= HEIGHT_SCRREN_MAX) {
+                tron1.direction = false;
+                //tron1.y để bóng di chuyển lên xuống
+            }
+
+            if ((tron1.y + tron1.r) <= HEIGHT_SCRREN_MIN) {
+                //Điểm bóng bật lại
+                tron1.direction = true;
+            }
+
+            if (tron1.direction) {
+                tron1.y += tron1.speed;
+            } else {
+                tron1.y -= tron1.speed;
+            }
+
+        }
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="game" width="850" height="500"></canvas>
+</body>
+
+</html>
