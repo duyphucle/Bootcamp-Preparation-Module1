@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="game" width="500" height="500"></canvas> 
+<script>
+
+
+
+class HinhChuNhat{
+    constructor(_dai,_rong){
+        this.width=_dai;
+        this.height=_rong;
+    }
+    chuVi(){
+        return (this.height+this.width)*2;
+    }
+    dienTich(){
+        return this.width*this.height;
+    }
+    veChuNhat(){
+        ctx.beginPath();
+        ctx.rect(20, 20, this.height, this.width);
+        ctx.fill();
+    }
+    setWidth(width){
+        this.width =width;
+    }
+    setHeight(height){
+        this.height =height;
+    }
+    toString(){
+        return ("Chu vi la:"+this.chuVi() + ".Dien tich la:" +this.dienTich() )
+    }
+   
+}
+let ctx = document.getElementById("game").getContext("2d");
+    let cn= new HinhChuNhat(400,500);
+    alert(cn.toString())
+    cn.veChuNhat();
+    alert(cn.chuVi());
+    alert(cn.dienTich());
+    cn.setHeight(1000);
+    alert(cn.chuVi());
+ 
+</script>
+</body>
+</html>
