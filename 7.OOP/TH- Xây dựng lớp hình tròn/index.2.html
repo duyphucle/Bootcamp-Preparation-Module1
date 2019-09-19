@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class HinhTron {
+            constructor(r) {
+                this.r = r;
+            }
+            getR() {
+                return this.r;
+            }
+            getS() {
+                return Math.PI * this.r * this.r;
+            }
+            setR(a) {
+                this.r = a;
+            }
+        }
+        let hTron = new HinhTron(5);
+        let r1 = hTron.getR();
+        let s1 = hTron.getS();
+        alert("Ban kinh la:" + r1 + ".Dien tich la:" + s1)
+        hTron.setR(10);
+        alert(hTron.getR());
+    </script>
+</body>
+
+</html>
