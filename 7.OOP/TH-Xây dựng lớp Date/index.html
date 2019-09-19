@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class Date{
+        constructor (_day,_month,_year){
+            this.day=_day;
+            this.month=_month;
+            this.year=_year;
+            //contructor chi luu thuoc tinh
+        }
+            getDay() {
+                return this.day;    
+            }
+            getMonth(){
+                return this.month;
+            }
+            getYear(){
+                return this.year;
+            }
+            setDay(day){
+                this.day=day;
+            }
+            setMonth(month){
+                this.month=month;
+            }
+            setYear(year){
+                this.year=year;
+            }
+            toString(){
+                return (this.day+"/"+this.month+"/"+this.year);
+            }
+    }    
+        let date= new Date(2,2,2015)
+        alert(date.toString());
+        date.setDay(20);
+        date.setMonth(12);
+        date.setYear(2000);
+        alert(date.getDay()+"/" + date.getMonth()+ "/"+ date.getYear());
+</script>
+</body>
+</html>
