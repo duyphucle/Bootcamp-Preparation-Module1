@@ -22,7 +22,7 @@
         ];
         var tileW = 40, tileH = 40;
         var mapW = 22, mapH = 14;
-
+        var currentSecond = 0, frameCount = 0, framesLastSecond = 0, lastFrameTime = 0;
 
         function drawGame() {
             if (ctx == null) { return; }
@@ -45,7 +45,7 @@
                 }
             }
             ctx.fillStyle = "red";
-            draw();
+            draw()
             requestAnimationFrame(drawGame);
         }
         function hinhTron(x, y, r) {

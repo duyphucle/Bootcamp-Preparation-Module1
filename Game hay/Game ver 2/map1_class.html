@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+</head>
+
+<body>
+    <canvas id="game" width="850" height="500"></canvas>
+
+    <script type="text/javascript">
+        var ctx = null;
+        var gameMap = [
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2, 1, 1, 1, 0, 0,
+            0, 0, 1, 1, 1, 0, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 0, 1, 1, 1, 0, 0,
+            0, 0, 1, 1, 1, 0, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 0, 1, 1, 1, 0, 0,
+            0, 0, 1, 1, 1, 0, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 0, 1, 1, 1, 0, 0,
+            0, 0, 1, 1, 1, 0, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 0, 1, 1, 1, 0, 0,
+            0, 0, 1, 1, 1, 0, 3, 2, 3, 2, 3, 2, 3, 2, 3, 2, 0, 1, 1, 1, 0, 0,
+            0, 0, 1, 1, 1, 0, 2, 3, 2, 3, 2, 3, 2, 3, 2, 3, 0, 1, 1, 1, 0, 0,
+            0, 0, 1, 1, 1, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        ];
+        var tileW = 40, tileH = 40;
+        var mapW = 22, mapH = 14;
+
+        var r = 15;
+        var a1 = 250
+        var b1 = 260
+        var a2 = 640
+        var b2 = 300
+        
+        const WIDTH_SCRREN_MIN = 250;
+        const WIDTH_SCRREN_MAX = 640;
+        
+        const canvas = document.getElementById("game");
+        const context = canvas.getContext("2d");
+
+        class drawGame {
+            constructor(){}
+            veMap() {
+                if (context == null) { return; }
+                for (let y = 0; y < mapH; ++y) {
+                    for (let x = 0; x < mapW; ++x) {
+                        switch (gameMap[((y * mapW) + x)]) {
+                            case 1:
+                            context.fillStyle = "#33ff33";
+                                break;
+                            case 3:
+                            context.fillStyle = "#c2d6d6";
+                                break;
+                            case 2:
+                            context.fillStyle = "#ffffff";
+                                break;
+                            default:
+                            context.fillStyle = "#b3f0ff";
+                        }
+                        context.fillRect(x * tileW, y * tileH, tileW, tileH);
+                    }
+                }
+                context.fillStyle = "red";
+              //  this.updatePositon()
+               // requestAnimationFrame(drawGame);
+            }
+        }
+      
+        class hinhTron {
+            constructor(x, y, r) {
+                this.x = x;
+                this.y = y;
+                this.r = r;
+                this.speed = 5;
+                this.direction = true;
+            }
+            drawCircle() {
+                context.beginPath();
+                context.arc(this.x, this.y, this.r, 0, 2 * Math.PI, true);
+                context.arc(this.x, this.y + 80, this.r, 0, 2 * Math.PI, true);
+                context.arc(this.x, this.y - 80, this.r, 0, 2 * Math.PI, true);
+                context.closePath();
+                context.fill();
+            }
+
+            updatePositon() {
+                if ((this.x) >= WIDTH_SCRREN_MAX) {
+                    this.direction = false;
+                }
+                if ((this.x) <= WIDTH_SCRREN_MIN) {
+                    this.direction = true;
+                }
+                if (this.direction) {
+                    this.x += this.speed;
+                } else {
+                    this.x -= this.speed;
+                }
+                this.drawCircle();
+            }
+        }
+        // var r = 15;
+        // var a1 = 250
+        // var b1 = 260
+        // var a2 = 640
+        // var b2 = 300
+        // let map1 = new drawGame()
+        // var tron1 = new hinhTron(a1, b1, r);
+        // var tron2 = new hinhTron(a2, b2, r);
+        // const WIDTH_SCRREN_MIN = 250;
+        // const WIDTH_SCRREN_MAX = 640;
+        // window.onload = function () {
+        //     ctx = document.getElementById('game').getContext("2d");
+        //     window.setInterval(function () {
+        //         ctx.clearRect(0, 0, 1500, 1100);
+        //         map1.veMap();
+        //         tron2.updatePositon();
+        //         tron1.updatePositon();
+        //     }, 100);
+        // };
+        
+    </script>
+    <script src="./scripts/isHex.js" defer></script>
+    <script src="./scripts/components/Square.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/controller.js" async></script>
+</body>
+
+</html>

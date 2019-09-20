@@ -2,8 +2,8 @@
     const cv = document.getElementById("game");
     const cx = cv.getContext("2d");
     const mid = {
-      x: 320,
-      y: 240
+      x: 315,
+      y: 245
     };
     const start = new Date().getTime();
     const clear = () => {
@@ -25,9 +25,7 @@
       cx.arc(cor.x + mid.x, cor.y + mid.y, r, 0, 2 * Math.PI, false);
       cx.fillStyle = "#000";
       cx.fill();
-      cx.lineWidth = 1;
-      cx.strokeStyle = "#000";
-      cx.stroke();
+     
       cx.closePath();
     };
     
@@ -35,32 +33,30 @@
       requestAnimationFrame(a);
       clear();
       drawGame();
-      var ag = Math.PI / 2;
-      for (var i = 0; i < 4; ++i)
-        drawRnd(calculate(ag * i, 180, .2), 10);
-      var ag = Math.PI / 2;
-      for (var i = 0; i < 4; ++i)
-        drawRnd(calculate(ag * i, 150, .2), 10);
      
       var ag = Math.PI / 2;
       for (var i = 0; i < 4; ++i)
-        drawRnd(calculate(ag * i, 120, .2), 10);
+        drawRnd(calculate(ag * i, 125, .3), 7);
      
       var ag = Math.PI / 2;
       for (var i = 0; i < 4; ++i)
-        drawRnd(calculate(ag * i, 90, .2), 10);
+        drawRnd(calculate(ag * i, 100, .3), 7);
      
       var ag = Math.PI / 2;
       for (var i = 0; i < 4; ++i)
-        drawRnd(calculate(ag * i, 60, .2), 10);
+        drawRnd(calculate(ag * i, 75, .3), 7);
      
       var ag = Math.PI / 2;
       for (var i = 0; i < 4; ++i)
-        drawRnd(calculate(ag * i, 30, .2), 10);
+        drawRnd(calculate(ag * i, 50, .3), 7);
+     
+      var ag = Math.PI / 2;
+      for (var i = 0; i < 4; ++i)
+        drawRnd(calculate(ag * i, 25, .3), 7);
      
       var ag = Math.PI / 2;
       for (var i = 0; i < 1; ++i)
-        drawRnd(calculate(ag * i, 0, .2), 10);
+        drawRnd(calculate(ag * i, 0, .3), 7);
         
     })()
   })()
