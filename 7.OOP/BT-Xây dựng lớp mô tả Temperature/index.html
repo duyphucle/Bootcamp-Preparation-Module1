@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><input id="doC" type="number" value="" onchange="myFun()"></td>
+            <td>
+            <td><button>Độ C</button></td>
+            </td>
+        </tr>
+        <tr>
+            <td><input id="doF" type="text" value=""></td>
+            <td><button>Độ F</button></td>
+        </tr>
+        <tr>
+            <td><input id="doK" type="text" value=""></td>
+            <td><button>Độ KenVin</button></td>
+        </tr>
+    </table>
+</body>
+<script>
+    class Temperature {
+        constructor() {
+            this.doC = parseInt(document.getElementById("doC").value);
+        }
+        doF() {
+            return this.doC * 1.8 + 3.2;
+        }
+        doK() {
+
+            return this.doC + 273.15;
+        }
+    }
+    function myFun() {
+        let teamper = new Temperature();
+        document.getElementById("doK").value = teamper.doK();
+        document.getElementById("doF").value = teamper.doF();
+    }
+</script>
+</html>
