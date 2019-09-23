@@ -1,0 +1,164 @@
+#main{
+   
+    position: relative;
+    left :20px;
+    top : 20px;
+    width: 400px;
+    height: 300px;
+    border: 1px solid red;
+}
+#head{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border: 1px solid red;
+
+}   
+#Gui{
+    position: relative;
+    float: right;
+   
+    width: 50px;
+    height: 45px;
+    border: 1px solid mediumspringgreen;
+
+}   
+#chuc_nang{
+    position: relative;   
+    width: 400px;
+    height: 48px;
+    border: 1px solid yellow;
+}  
+#sac_pin{
+    position: relative;   
+    float:left;
+    width: 25%;
+    height: 48px;
+    border: 1px solid yellow;
+}  
+#inbox{
+    position: relative;   
+    float:left;
+    width: 25%;
+    height: 48px;
+    border: 1px solid yellow;
+}  
+#seen{
+    position: relative;   
+    float:left;
+    width: 25%;
+    height: 48px;
+    border: 1px solid yellow;
+}  
+#draft{
+    position: relative;   
+    float:left;
+    width: 25%;
+    height: 48px;
+    border: 1px solid yellow;
+}  
+#hang{
+    
+    width: 90%;
+    height: 200px;
+    border: 1px solid yellow;
+}  
+#pin{
+    position: relative;   
+    float: right;    
+    width: 9%;
+    height: 20px;
+    border: 1px solid yellow;
+}  
+
+#content{
+    position: relative;   
+    float: right;    
+    width: 340px;
+    height: 45px;
+    border: 1px solid yellow;
+}  
+
+
+#main1{
+   
+    position: relative;
+    left :20px;
+    top : 20px;
+    width: 400px;
+    height: 300px;
+    border: 1px solid red;
+}
+#head1{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border: 1px solid red;
+
+}   
+#Gui1{
+    position: relative;
+    float: right;
+   
+    width: 50px;
+    height: 45px;
+    border: 1px solid mediumspringgreen;
+
+}   
+#chuc_nang1{
+    position: relative;   
+    width: 400px;
+    height: 48px;
+    border: 1px solid yellow;
+}  
+#sac_pin_1{
+    position: relative;   
+    float:left;
+    width: 25%;
+    height: 48px;
+    border: 1px solid yellow;
+}  
+#inbox1{
+    position: relative;   
+    float:left;
+    width: 25%;
+    height: 48px;
+    border: 1px solid yellow;
+}  
+#seen1{
+    position: relative;   
+    float:left;
+    width: 25%;
+    height: 48px;
+    border: 1px solid yellow;
+}  
+#draft1{
+    position: relative;   
+    float:left;
+    width: 25%;
+    height: 48px;
+    border: 1px solid yellow;
+}  
+#hang1{
+    
+    width: 90%;
+    height: 200px;
+    border: 1px solid yellow;
+}  
+#pin1{
+    position: relative;   
+    float: right;    
+    width: 9%;
+    height: 20px;
+    border: 1px solid yellow;
+}  
+
+#content1{
+    position: relative;   
+    float: right;    
+    width: 340px;
+    height: 45px;
+    border: 1px solid yellow;
+}  
+
+
