@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let hinhTron = function (r) {
+            this.r = r;
+            this.getR = function () {
+                return r;
+            }
+            this.getS = function () {
+                return (Math.PI * r * r);
+            }
+        }
+        let htron = new hinhTron(6);
+        let r1 = htron.getR();
+        let s1 = htron.getS();
+        alert("Ban kinh hinh tron" + r1 + ".Dien tich la " + s1);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="game" width="1500px" height="1100px" style="border: 1px solid rebeccapurple"></canvas>
+  <script>
+    class HinhTron {
+      constructor() {
+        this.x = Math.floor(Math.random() * window.innerWidth);
+        this.y = Math.floor(Math.random() * window.innerHeight);
+        this.radius = Math.floor(Math.random() * 80);
+        this.speed = 2;
+        this.color = this.getRandomColor()
+        //Neu cho this.color o day mau sac se khong thay doi
+      }
+      getRandomHex() {
+        return Math.floor(Math.random() * 255);
+      }
+      getRandomColor() {
+        let red = this.getRandomHex();
+        let green = this.getRandomHex();
+        let blue = this.getRandomHex();
+        return "rgb(" + red + "," + green + "," + blue + ")";
+      }
+      createTron() {
+
+        ctx.beginPath();
+        ctx.fillStyle = this.color;
+        //neu getRandomColor() o day xe doi mau sau moi lan ve
+        ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, true);
+
+        ctx.closePath();
+        ctx.fill();
+        // ctx.clearRect(0, 0, 1500, 1100);
+
+      }
+      updatePositon() {
+        if (this.x >= 0) {
+          this.x += this.random(-50, 50);
+          this.y += this.random(-40, 20);
+          // ctx.clearRect(0, 0, 1500, 1100);
+          // Xoa ve lai: 1500 width,1100 heig
+          this.createTron()
+        }
+      }
+      random(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+    }
+    window.onload = function () {
+      ctx = document.getElementById('game').getContext("2d");
+      let arr = [];
+
+      for (i = 0; i < 300; i++) {
+        arr[i] = new HinhTron()
+      }
+      window.setInterval(function () {
+        ctx.clearRect(0, 0, 1500, 1100);
+        for (i = 0; i < 300; i++) {
+          arr[i].updatePositon();
+        }
+
+      }, 100);
+
+      //Di chuyeen
+      // ctx = document.getElementById('game').getContext("2d");
+      // for(i=0;i<300;i++){
+      //   let i=new HinhTron();
+      //   i.createTron();
+
+
+    };
+
+  </script>
+</body>
+
+</html>
