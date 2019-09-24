@@ -33,20 +33,24 @@
             }
             //Chwa xư ly duoc pin ve 0
             hao_den() {
-            
                 let i = 0;
                 if (this.status== true) {
                     delegateInteval = setInterval(function () {
                         document.getElementById("pin").innerHTML = a - i;
                         i++;
                         if (document.getElementById("pin").innerHTML == 0) {
+                            a=document.getElementById("pin").innerHTML
+                           
                             document.flashlamp.src = 'lampOff.png';
                             clearInterval(delegateInteval);
                         }
-                    }, 10);
+                    }, 50);
                 }
                 else
-                    clearInterval(delegateInteval);
+                    {
+                        a=document.getElementById("pin").innerHTML
+                        clearInterval(delegateInteval);
+                    }
             }
         }
         class Battery {
