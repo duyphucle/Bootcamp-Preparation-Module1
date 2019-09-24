@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="adamSay" value="1">Adam
+    <br>
+    <input id="evaSay">Eva
+    <br>
+    <button id="Send">Gửi</button>
+    <br>
+    <input id="Room">Diễn đàn
+    <script>
+        class Apple {
+            constructor() {
+                this.weight = 10;
+            }
+            decrease() {
+                return --this.weight;
+            }
+            isEmpty() {
+                if (this.weight == 0)
+                    alert("Ăn hết rồi còn mô nựa")
+            }
+            getWeight() {
+                return this.weight;
+            }
+        }
+        class Human {
+            constructor(_name, _gender, _weight, _apple) {
+                this.name = _name;
+                this.gender = _gender;
+                this.weight = _weight;
+                this.apple = _apple;
+            }
+            isMale() {
+                if (this.gender === "Male")
+                    alert("La Adam");
+                else
+                    alert("Eva");
+            }
+            setGender(_gender) {
+                this.gender = _gender;
+            }
+            eat() {
+                --this.apple.weight;
+                return ++this.weight;
+
+            }
+            checkApple() {
+                return this.apple.weight;
+            }
+            say() {
+                //Tao mang 1 chiều để lưu hộp thoại lấy từ tính năng Inbox của bài điện thoại
+                document.getElementById("Room").value = document.getElementById("adamSay").value
+            }
+            getName(_name) {
+                this.name = _name;
+            }
+            setName() {
+                return this.name;
+            }
+            showInfo() {
+                return ("Ten la:" + this.name + " Gioi tinh:" + this.gender)
+            }
+        }
+        let taoVN = new Apple();
+        let Adam = new Human("Adam1", "Male", 70, taoVN);
+        let Eva = new Human("Eva1", "Female", 70, taoVN);
+        alert(Eva.showInfo())
+
+    </script>
+</body>
+
+</html>
