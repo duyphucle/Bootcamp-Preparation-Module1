@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <img name='flashlamp' src="lampOn.png" alt="" width="100%" height="500px">
+    <center>
+        <button onclick="switchOn()">ON</button>
+        <button onclick="switchOff()">OFF</button>
+        <button id="pin">100</button>
+    </center>
+    <script>
+        class FlashLamp {
+            constructor(_status, _batt) {
+                this.status = _status;
+                this.batt = _batt;
+            }
+            turnOn() {
+                this.status = true;
+                document.flashlamp.src = 'lampOn.png';
+                this.hao_den()
+            }
+            turnOff() {
+                this.status = false;
+                document.flashlamp.src = 'lampOff.png';
+                this.hao_den()
+            }
+            //Chwa xư ly duoc pin ve 0
+            hao_den() {
+            
+                let i = 0;
+                if (this.status== true) {
+                    delegateInteval = setInterval(function () {
+                        document.getElementById("pin").innerHTML = a - i;
+                        i++;
+                        if (document.getElementById("pin").innerHTML == 0) {
+                            document.flashlamp.src = 'lampOff.png';
+                            clearInterval(delegateInteval);
+                        }
+                    }, 10);
+                }
+                else
+                    clearInterval(delegateInteval);
+            }
+        }
+        class Battery {
+            constructor(_energy) {
+                this.energy = _energy;
+            }
+            
+        }
+        class Control {
+            constructor(_status, _lamp) {
+                this.status = _status;
+                this.lamp = _lamp;
+            }
+            switchOn() {
+                this.status = true;
+                this.lamp.turnOn();
+            }
+            switchOff() {
+                this.status = false;
+                this.lamp.turnOff();
+            }
+        }
+        let Batt = new Battery(100);
+        let FlashLamp1 = new FlashLamp(true, Batt);
+        let contro = new Control(true, FlashLamp1);
+        let delegateInteval;
+        let a = Batt.energy;
+        function switchOn() {
+            contro.switchOn();
+        }
+        function switchOff() {
+            contro.switchOff();
+        }
+    </script>
+</body>
+
+</html>
