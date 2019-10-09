@@ -1,0 +1,100 @@
+
+        #menu {
+            height: 40px;
+            padding: 0;
+            margin: 0;
+            background-color: #323031;
+            border: 1px solid #CDCDCD;
+        }
+        
+        #menu ul {
+            position: relative;
+            padding: 0px;
+            margin: 0;
+            left:50px;
+        }
+        #menu li {
+         
+            position: relative;
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #menu li a {
+
+            width: 100px;
+            height: 40px;
+            display: block;
+
+            text-decoration: none;
+            /* khong gach chan duoi */
+            text-align: center;
+            line-height: 30px;
+            /* line-height: do cao cua dong */
+            background-color: #323031;
+            color: #FFFFFF;
+            font-size: 17px;
+
+        }
+
+        #menu ul ul li a {
+           
+            /* position: relative; */
+            /* float: left; */
+            /* width: 200px; */
+            text-align: center;  
+            display: list-item;	
+        }
+    
+     
+        .sem li {
+            
+            width: 200px;
+            text-align: center;
+            height: 36px;
+                
+        }
+
+        #menu li a:hover {
+            background-color: #2A293E;
+            color: yellowgreen
+        }
+
+        #menu ul ul {   
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            visibility: hidden;
+        }
+
+        #menu ul li:hover ul {
+            visibility: visible;
+        }
+
+        .sem {
+            width: 810px;
+            left:0px;
+            /* padding: 10px; */
+        }
+
+      
+        ul {
+            list-style: none;
+        }
+
+        .movie-name-1 {
+            position: absolute;
+            color: gold;
+            top: 10px;
+            font-size: 25px;
+        }
+        .movie-name-2 {
+            position: absolute;
+            color: wheat;
+
+            left: 50px;
+            top: 200px;
+        }

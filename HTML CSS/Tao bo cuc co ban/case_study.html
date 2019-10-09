@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="menu_ngang_1.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="menu_ngang_2.css"> -->
+
+</head>
+
+<body>
+    <div id="pain">
+        <!-- <p>Link hướng dẫn - sẽ được xóa sau khi nhấn "Chỉ nhấn khi hoàn thành xong" </p>
+        <p>https://drive.google.com/file/d/1QrfSgc2MYFIaZ8as0375dQycTIxn72Np/view?usp=sharing"</p> -->
+        <table>
+            <caption> <a style="background-color: #4CAF50;color:#fff;font-size: 23px"> <b>Tạo khối cùng CodeGym - Học
+                        viên:Lê Duy Phúc</b></a></caption>
+            <tr>
+                <td><input id="width" value="100%" style="width:90px">Rộng <br></td>
+                <td><input id="height" value="100px" style="width:90px">Cao</td>
+                <td>
+                    <select id="bgColor" style="width:190px">
+                        <option style="background-color: #FF6F61" value="#FF6F61">Color</option>
+                        <option style="background-color: #6B5B95" value="#6B5B95"></option>
+                        <option style="background-color: #9B1B30" value="#9B1B30"></option>
+                        <option style="background-color: #77212E" value="#77212E"></option>
+                        <option style="background-color: #FA9A85" value="#FA9A85"></option>
+                        <option style="background-color: #935529" value="#935529"></option>
+                        <option style="background-color: #E08119" value="#E08119"></option>
+                        <option style="background-color: #2A4B7C" value="#2A4B7C"></option>
+                        <option style="background-color: #F3E0BE" value="#F3E0BE"></option>
+                        <option style="background-color: #2A293E" value="#2A293E"></option>
+                        <option style="background-color: #F96714" value="#F96714"></option>
+                        <option style="background-color: #264E36" value="#264E36"></option>
+                        <option style="background-color: #F3E0BE" value="#F3E0BE"></option>
+                        <option style="background-color: #2A293E" value="#2A293E"></option>
+                        <option style="background-color: #9F9C99" value="#9F9C99"></option>
+                        <option style="background-color: #797B3A" value="#797B3A"></option>
+                        <option style="background-color: #DD4132" value="#DD4132"></option>
+                        <option style="background-color: #9E1030" value="#9E1030"></option>
+                        <option style="background-color: #FE840E" value="#FE840E"></option>
+                        <option style="background-color: #FF6F61" value="#FF6F61"></option>
+                        <option style="background-color: #C62168" value="#C62168"></option>
+                        <option style="background-color: #8D9440" value="#8D9440"></option>
+                        <option style="background-color: #FFD662" value="#FFD662"></option>
+                    </select>
+                </td>
+                <td><input type="checkbox" id="fixed1" value="1">Cố định</td>
+
+                <td>
+                    <select id="head_0" style="width:120px" onchange="drawHead()">
+                        <option class="click1" style="width:90px">HEAD</option>
+                        <option class="click1" style="width:90px">main</option>
+                        <option class="click1" style="width:90px">head</option>
+                        <option class="click1" style="width:90px">head_1</option>
+                        <option class="click1" style="width:90px">head_2</option>
+                        <option class="click1" style="width:90px">head_3</option>
+                        <option class="click1" style="width:90px">head_4</option>
+                        <option class="click1" style="width:90px">head_5</option>
+                        <option class="click1" style="width:90px">head_6</option>
+                        <option class="click1" style="width:90px">head_11</option>
+                        <option class="click1" style="width:90px">head_12</option>
+                        <option class="click1" style="width:90px">head_13</option>
+                        <option class="click1" style="width:90px">head_14</option>
+                        <option class="click1" style="width:90px">head_21</option>
+                        <option class="click1" style="width:90px">head_22</option>
+                        <option class="click1" style="width:90px">head_23</option>
+                        <option class="click1" style="width:90px">head_24</option>
+                        <option class="click1" style="width:90px">head_31</option>
+                        <option class="click1" style="width:90px">head_32</option>
+                        <option class="click1" style="width:90px">head_33</option>
+                        <option class="click1" style="width:90px">head_34</option>
+                        <option class="click1" style="width:90px">head_41</option>
+                        <option class="click1" style="width:90px">head_42</option>
+                        <option class="click1" style="width:90px">head_43</option>
+                        <option class="click1" style="width:90px">head_44</option>
+                        <option class="click1" style="width:90px">head_51</option>
+                        <option class="click1" style="width:90px">head_52</option>
+                        <option class="click1" style="width:90px">head_53</option>
+                        <option class="click1" style="width:90px">head_54</option>
+                        <option class="click1" style="width:90px">head_61</option>
+                        <option class="click1" style="width:90px">head_62</option>
+                        <option class="click1" style="width:90px">head_63</option>
+                        <option class="click1" style="width:90px">head_64</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="headlink_0" style="width:120px" onchange="drawHeadLink()">
+                        <option class="click1" style="width:90px">HEADLINK</option>
+                        <option class="click1" style="width:90px">headlink</option>
+                        <option class="click1" style="width:90px">headlink_1</option>
+                        <option class="click1" style="width:90px">headlink_2</option>
+                        <option class="click1" style="width:90px">headlink_3</option>
+                        <option class="click1" style="width:90px">headlink_4</option>
+                        <option class="click1" style="width:90px">headlink_5</option>
+                        <option class="click1" style="width:90px">headlink_6</option>
+                        <option class="click1" style="width:90px">headlink_11</option>
+                        <option class="click1" style="width:90px">headlink_12</option>
+                        <option class="click1" style="width:90px">headlink_13</option>
+                        <option class="click1" style="width:90px">headlink_14</option>
+                        <option class="click1" style="width:90px">headlink_21</option>
+                        <option class="click1" style="width:90px">headlink_22</option>
+                        <option class="click1" style="width:90px">headlink_23</option>
+                        <option class="click1" style="width:90px">headlink_24</option>
+                        <option class="click1" style="width:90px">headlink_31</option>
+                        <option class="click1" style="width:90px">headlink_32</option>
+                        <option class="click1" style="width:90px">headlink_33</option>
+                        <option class="click1" style="width:90px">headlink_34</option>
+                        <option class="click1" style="width:90px">headlink_41</option>
+                        <option class="click1" style="width:90px">headlink_42</option>
+                        <option class="click1" style="width:90px">headlink_43</option>
+                        <option class="click1" style="width:90px">headlink_44</option>
+                        <option class="click1" style="width:90px">headlink_51</option>
+                        <option class="click1" style="width:90px">headlink_52</option>
+                        <option class="click1" style="width:90px">headlink_53</option>
+                        <option class="click1" style="width:90px">headlink_54</option>
+                        <option class="click1" style="width:90px">headlink_61</option>
+                        <option class="click1" style="width:90px">headlink_62</option>
+                        <option class="click1" style="width:90px">headlink_63</option>
+                        <option class="click1" style="width:90px">headlink_64</option>
+
+                    </select>
+                </td>
+                <td>
+                    <select id="left_0" style="width:120px" onchange="drawLeft()">
+                        <option class="click1" style="width:90px">LEFT</option>
+                        <option class="click1" style="width:90px">left</option>
+                        <option class="click1" style="width:90px">left_1</option>
+                        <option class="click1" style="width:90px">left_2</option>
+                        <option class="click1" style="width:90px">left_3</option>
+                        <option class="click1" style="width:90px">left_4</option>
+                        <option class="click1" style="width:90px">left_5</option>
+                        <option class="click1" style="width:90px">left_6</option>
+                        <option class="click1" style="width:90px">left_11</option>
+                        <option class="click1" style="width:90px">left_12</option>
+                        <option class="click1" style="width:90px">left_13</option>
+                        <option class="click1" style="width:90px">left_14</option>
+                        <option class="click1" style="width:90px">left_21</option>
+                        <option class="click1" style="width:90px">left_22</option>
+                        <option class="click1" style="width:90px">left_23</option>
+                        <option class="click1" style="width:90px">left_24</option>
+                        <option class="click1" style="width:90px">left_31</option>
+                        <option class="click1" style="width:90px">left_32</option>
+                        <option class="click1" style="width:90px">left_33</option>
+                        <option class="click1" style="width:90px">left_34</option>
+                        <option class="click1" style="width:90px">left_41</option>
+                        <option class="click1" style="width:90px">left_42</option>
+                        <option class="click1" style="width:90px">left_43</option>
+                        <option class="click1" style="width:90px">left_44</option>
+                        <option class="click1" style="width:90px">left_51</option>
+                        <option class="click1" style="width:90px">left_52</option>
+                        <option class="click1" style="width:90px">left_53</option>
+                        <option class="click1" style="width:90px">left_54</option>
+                        <option class="click1" style="width:90px">left_61</option>
+                        <option class="click1" style="width:90px">left_62</option>
+                        <option class="click1" style="width:90px">left_63</option>
+                        <option class="click1" style="width:90px">left_64</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="content_0" style="width:120px" onchange="drawContent()">
+                        <option class="click1" style="width:90px">CONTENT</option>
+                        <option class="click1" style="width:90px">content</option>
+                        <option class="click1" style="width:90px">content_1</option>
+                        <option class="click1" style="width:90px">content_2</option>
+                        <option class="click1" style="width:90px">content_3</option>
+                        <option class="click1" style="width:90px">content_4</option>
+                        <option class="click1" style="width:90px">content_5</option>
+                        <option class="click1" style="width:90px">content_6</option>
+                        <option class="click1" style="width:90px">content_11</option>
+                        <option class="click1" style="width:90px">content_12</option>
+                        <option class="click1" style="width:90px">content_13</option>
+                        <option class="click1" style="width:90px">content_14</option>
+                        <option class="click1" style="width:90px">content_21</option>
+                        <option class="click1" style="width:90px">content_22</option>
+                        <option class="click1" style="width:90px">content_23</option>
+                        <option class="click1" style="width:90px">content_24</option>
+                        <option class="click1" style="width:90px">content_31</option>
+                        <option class="click1" style="width:90px">content_32</option>
+                        <option class="click1" style="width:90px">content_33</option>
+                        <option class="click1" style="width:90px">content_34</option>
+                        <option class="click1" style="width:90px">content_41</option>
+                        <option class="click1" style="width:90px">content_42</option>
+                        <option class="click1" style="width:90px">content_43</option>
+                        <option class="click1" style="width:90px">content_44</option>
+                        <option class="click1" style="width:90px">content_51</option>
+                        <option class="click1" style="width:90px">content_52</option>
+                        <option class="click1" style="width:90px">content_53</option>
+                        <option class="click1" style="width:90px">content_54</option>
+                        <option class="click1" style="width:90px">content_61</option>
+                        <option class="click1" style="width:90px">content_62</option>
+                        <option class="click1" style="width:90px">content_63</option>
+                        <option class="click1" style="width:90px">content_64</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="right_0" style="width:120px" onchange="drawRight()">
+                        <option class="click1" style="width:90px">RIGHT</option>
+                        <option class="click1" style="width:90px">right</option>
+                        <option class="click1" style="width:90px">right_1</option>
+                        <option class="click1" style="width:90px">right_2</option>
+                        <option class="click1" style="width:90px">right_3</option>
+                        <option class="click1" style="width:90px">right_4</option>
+                        <option class="click1" style="width:90px">right_5</option>
+                        <option class="click1" style="width:90px">right_6</option>
+                        <option class="click1" style="width:90px">right_11</option>
+                        <option class="click1" style="width:90px">right_12</option>
+                        <option class="click1" style="width:90px">right_13</option>
+                        <option class="click1" style="width:90px">right_14</option>
+                        <option class="click1" style="width:90px">right_21</option>
+                        <option class="click1" style="width:90px">right_22</option>
+                        <option class="click1" style="width:90px">right_23</option>
+                        <option class="click1" style="width:90px">right_24</option>
+                        <option class="click1" style="width:90px">right_31</option>
+                        <option class="click1" style="width:90px">right_32</option>
+                        <option class="click1" style="width:90px">right_33</option>
+                        <option class="click1" style="width:90px">right_34</option>
+                        <option class="click1" style="width:90px">right_41</option>
+                        <option class="click1" style="width:90px">right_42</option>
+                        <option class="click1" style="width:90px">right_43</option>
+                        <option class="click1" style="width:90px">right_44</option>
+                        <option class="click1" style="width:90px">right_51</option>
+                        <option class="click1" style="width:90px">right_52</option>
+                        <option class="click1" style="width:90px">right_53</option>
+                        <option class="click1" style="width:90px">right_54</option>
+                        <option class="click1" style="width:90px">right_61</option>
+                        <option class="click1" style="width:90px">right_62</option>
+                        <option class="click1" style="width:90px">right_63</option>
+                        <option class="click1" style="width:90px">right_64</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="footer_0" style="width:120px" onchange="drawFooter()">
+                        <option class="click1" style="width:90px">FOOTER</option>
+                        <option class="click1" style="width:90px">footer</option>
+                        <option class="click1" style="width:90px">footer_1</option>
+                        <option class="click1" style="width:90px">footer_2</option>
+                        <option class="click1" style="width:90px">footer_3</option>
+                        <option class="click1" style="width:90px">footer_4</option>
+                        <option class="click1" style="width:90px">footer_5</option>
+                        <option class="click1" style="width:90px">footer_6</option>
+                        <option class="click1" style="width:90px">footer_11</option>
+                        <option class="click1" style="width:90px">footer_12</option>
+                        <option class="click1" style="width:90px">footer_13</option>
+                        <option class="click1" style="width:90px">footer_14</option>
+                        <option class="click1" style="width:90px">footer_21</option>
+                        <option class="click1" style="width:90px">footer_22</option>
+                        <option class="click1" style="width:90px">footer_23</option>
+                        <option class="click1" style="width:90px">footer_24</option>
+                        <option class="click1" style="width:90px">footer_31</option>
+                        <option class="click1" style="width:90px">footer_32</option>
+                        <option class="click1" style="width:90px">footer_33</option>
+                        <option class="click1" style="width:90px">footer_34</option>
+                        <option class="click1" style="width:90px">footer_41</option>
+                        <option class="click1" style="width:90px">footer_42</option>
+                        <option class="click1" style="width:90px">footer_43</option>
+                        <option class="click1" style="width:90px">footer_44</option>
+                        <option class="click1" style="width:90px">footer_51</option>
+                        <option class="click1" style="width:90px">footer_52</option>
+                        <option class="click1" style="width:90px">footer_53</option>
+                        <option class="click1" style="width:90px">footer_54</option>
+                        <option class="click1" style="width:90px">footer_61</option>
+                        <option class="click1" style="width:90px">footer_62</option>
+                        <option class="click1" style="width:90px">footer_63</option>
+                        <option class="click1" style="width:90px">footer_64</option>
+                    </select>
+                <td>
+                    <select id="Pro1" style="width:90px">
+                        <option value="update">Update</option>
+
+
+                    </select>
+                </td>
+                </td>
+                <!-- <td colspan="3"><button id="done" style="background-color:#4CAF50;color:white" onclick="draw(9)"
+                        ;><b>Chỉ nhấn khi hoàn thành xong</b></button></td> -->
+            </tr>
+
+        </table>
+        <table>
+            <tr>
+                <th style="background-color:teal" colspan="6">Font</th>
+                <th style="background-color:teal" colspan="5">Paragraph</th>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <select id="font_Family" onchange="fontFamily()">
+                        <option value="Time New Roman">Time New Roman</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Verdana">Verdana </option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Lucida Console">Lucida Console</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="font_Size" style="width:50px" onchange="fontSize()">
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+                        <option value="24">24</option>
+                        <option value="26">26</option>
+                        <option value="30">30</option>
+                    </select>
+                </td>
+                <td><button id="font_Size_up" style="width:30px;background-color:aquamarine"
+                        onclick="fontSizeup()"><b>A+</b></button></td>
+                <td><button id="font_Size_down" style="width:30px;background-color:aquamarine"
+                        onclick="fontSizedown()"><b>A-</button></td>
+                <td><button id="list_Circle" style="background-color:aquamarine;line-height:0.7"
+                        onclick="listCircle()">o__<br>o__<br>o__<button</td> <td><button id="list_Numbering"
+                                style="width:30px;background-color:aquamarine;line-height:0.7"
+                                onclick="listNumbering()"><sup>1__<br>2__<br>3__</button></td>
+                <td><button id="list_None" style="width:30px;background-color:aquamarine;line-height:0.7"
+                        onclick="listNone()">__<br>__<br>__</button> </td>
+                <td><input id="menu1" style="width:70px"></td>
+                <td><input id="menu2" style="width:70px"></td>
+                <td><input id="menu3" style="width:70px"></td>
+                <td><input id="menu4" style="width:70px"></td>
+                <td><input id="menu5" style="width:70px">Tên Menu</td>
+
+            </tr>
+            <tr>
+                <td><button id="font_bold" style="background-color:aquamarine;width:30px"
+                        onclick="fontBold()"><b>B</b></button></td>
+                <td><button id="font_Italic" style="background-color:aquamarine;width:30px"
+                        onclick="fontItalic()"><i>I</i></button></td>
+                <td><button id="font_Underline" style="background-color:aquamarine;width:30px"
+                        onclick="fontUnderline()"><u>U</u></button></td>
+                <td colspan="2">
+                    <select id="font_Color" style="width:90px" onchange="fontColor()">
+                        <option style="background-color: #FF6F61" value="#FF6F61">Font Color</option>
+                        <option style="background-color: #6B5B95" value="#6B5B95"></option>
+                        <option style="background-color: #9B1B30" value="#9B1B30"></option>
+                        <option style="background-color: #77212E" value="#77212E"></option>
+                        <option style="background-color: #FA9A85" value="#FA9A85"></option>
+                        <option style="background-color: #935529" value="#935529"></option>
+                        <option style="background-color: #E08119" value="#E08119"></option>
+                        <option style="background-color: #2A4B7C" value="#2A4B7C"></option>
+                        <option style="background-color: #F3E0BE" value="#F3E0BE"></option>
+                        <option style="background-color: #2A293E" value="#2A293E"></option>
+                        <option style="background-color: #F96714" value="#F96714"></option>
+                        <option style="background-color: #264E36" value="#264E36"></option>
+                        <option style="background-color: #F3E0BE" value="#F3E0BE"></option>
+                        <option style="background-color: #2A293E" value="#2A293E"></option>
+                        <option style="background-color: #9F9C99" value="#9F9C99"></option>
+                        <option style="background-color: #797B3A" value="#797B3A"></option>
+                        <option style="background-color: #DD4132" value="#DD4132"></option>
+                        <option style="background-color: #9E1030" value="#9E1030"></option>
+                        <option style="background-color: #FE840E" value="#FE840E"></option>
+                        <option style="background-color: #FF6F61" value="#FF6F61"></option>
+                        <option style="background-color: #C62168" value="#C62168"></option>
+                        <option style="background-color: #8D9440" value="#8D9440"></option>
+                        <option style="background-color: #FFD662" value="#FFD662"></option>
+                    </select>
+                </td>
+                <td><button id="align_Text_left"><img src="align_text_left.png" onclick="alignTextleft()"></button></td>
+                <td><button id="align_Text_center"><img src="align_text_center.png"
+                            onclick="alignTextcenter()"></button></td>
+                <td><button id="align_Text_right"><img src="align_text_right.png" onclick="alignTextright()"></button>
+                </td>
+                <td><button id="align_Text_justify"><img src="align_text_justify.png"
+                            onclick="alignTextjustify()"></button></td>
+                <td><button id="test" onclick="menuNgang(1)">Menu Ngang1</button></td>
+                <td><button id="test" onclick="menuNgang(2)">Menu Ngang2</button></td>
+                <td><button id="test" onclick="menuNgang(3)">Menu Ngang3</button></td>
+                <td><button id="test" onclick="menuNgang(4)">Menu Ngang4</button></td>
+                <td><button class="deleteAll" onclick="deleteAll(1)">Xóa info</button></td>
+                <td><button class="deleteAll" onclick="deleteAll(2)">Chỉ nhấn khi hoàn thiện</button></td>
+            </tr>
+
+        </table>
+    </div>
+    <div id="main" style="  top: 0px;position:relative">
+        <div id="head">
+            <div id="head_1">
+                    <div id="head_11" class="maininfo"></div>
+                <!-- <div>
+                <ul id="head_11" class="maininfo">
+                    <li>Tao quan</li>
+                    <li>Thanh Lam</li>
+                    <li>BA</li>
+                </ul>
+                </div> -->
+                <div id="head_12" class="maininfo"></div>
+                <div id="head_13" class="maininfo"></div>
+                <div id="head_14" class="maininfo"></div>
+            </div>
+            <div id="head_2">
+                <div id="head_21" class="maininfo"></div>
+                <div id="head_22" class="maininfo"></div>
+                <div id="head_23" class="maininfo"></div>
+                <div id="head_24" class="maininfo"></div>
+            </div>
+            <div id="head_3">
+                <div id="head_31" class="maininfo"></div>
+                <div id="head_32" class="maininfo"></div>
+                <div id="head_33" class="maininfo"></div>
+                <div id="head_34" class="maininfo"></div>
+            </div>
+            <div id="head_4">
+                <div id="head_41" class="maininfo"></div>
+                <div id="head_42" class="maininfo"></div>
+                <div id="head_43" class="maininfo"></div>
+                <div id="head_44" class="maininfo"></div>
+            </div>
+            <div id="head_5">
+                <div id="head_51" class="maininfo"></div>
+                <div id="head_52" class="maininfo"></div>
+                <div id="head_53" class="maininfo"></div>
+                <div id="head_54" class="maininfo"></div>
+            </div>
+            <div id="head_6">
+                <div id="head_61" class="maininfo"></div>
+                <div id="head_62" class="maininfo"></div>
+                <div id="head_63" class="maininfo"></div>
+                <div id="head_64" class="maininfo"></div>
+            </div>
+        </div>
+
+        <div id="headlink">
+            <div id="headlink_1">
+                <div id="headlink_11" class="maininfo"></div>
+                <div id="headlink_12" class="maininfo"></div>
+                <div id="headlink_13" class="maininfo"></div>
+                <div id="headlink_14" class="maininfo"></div>
+            </div>
+            <div id="headlink_2">
+                <div id="headlink_21" class="maininfo"></div>
+                <div id="headlink_22" class="maininfo"></div>
+                <div id="headlink_23" class="maininfo"></div>
+                <div id="headlink_24" class="maininfo"></div>
+            </div>
+            <div id="headlink_3">
+                <div id="headlink_31"></div>
+                <div id="headlink_32" class="maininfo"></div>
+                <div id="headlink_33" class="maininfo"></div>
+                <div id="headlink_34" class="maininfo"></div>
+            </div>
+            <div id="headlink_4">
+                <div id="headlink_41" class="maininfo"></div>
+                <div id="headlink_42" class="maininfo"></div>
+                <div id="headlink_43" class="maininfo"></div>
+                <div id="headlink_44" class="maininfo"></div>
+            </div>
+            <div id="headlink_5">
+                <div id="headlink_51" class="maininfo"></div>
+                <div id="headlink_52" class="maininfo"></div>
+                <div id="headlink_53" class="maininfo"></div>
+                <div id="headlink_54" class="maininfo"></div>
+            </div>
+            <div id="headlink_6">
+                <div id="headlink_61" class="maininfo"></div>
+                <div id="headlink_62" class="maininfo"></div>
+                <div id="headlink_63" class="maininfo"></div>
+                <div id="headlink_64" class="maininfo"></div>
+            </div>
+        </div>
+
+        <div id="left">
+            <div id="left_1">
+                <div id="left_11" class="maininfo"></div>
+                <div id="left_12" class="maininfo"></div>
+                <div id="left_13" class="maininfo"></div>
+                <div id="left_14" class="maininfo"></div>
+            </div>
+            <div id="left_2">
+                <div id="left_21" class="maininfo"></div>
+                <div id="left_22" class="maininfo"></div>
+                <div id="left_23" class="maininfo"></div>
+                <div id="left_24" class="maininfo"></div>
+            </div>
+            <div id="left_3">
+                <div id="left_31" class="maininfo"></div>
+                <div id="left_32" class="maininfo"></div>
+                <div id="left_33" class="maininfo"></div>
+                <div id="left_34" class="maininfo"></div>
+            </div>
+            <div id="left_4">
+                <div id="left_41" class="maininfo"></div>
+                <div id="left_42" class="maininfo"></div>
+                <div id="left_43" class="maininfo"></div>
+                <div id="left_44" class="maininfo"></div>
+            </div>
+            <div id="left_5">
+                <div id="left_51" class="maininfo"></div>
+                <div id="left_52" class="maininfo"></div>
+                <div id="left_53" class="maininfo"></div>
+                <div id="left_54" class="maininfo"></div>
+            </div>
+            <div id="left_6">
+                <div id="left_61" class="maininfo"></div>
+                <div id="left_62" class="maininfo"></div>
+                <div id="left_63" class="maininfo"></div>
+                <div id="left_64" class="maininfo"></div>
+            </div>
+        </div>
+        <div id="content">
+            <div id="content_1">
+                <div id="content_11" class="maininfo"></div>
+                <div id="content_12" class="maininfo"></div>
+                <div id="content_13" class="maininfo"></div>
+                <div id="content_14" class="maininfo"></div>
+            </div>
+            <div id="content_2">
+                <div id="content_21" class="maininfo"></div>
+                <div id="content_22" class="maininfo"></div>
+                <div id="content_23" class="maininfo"></div>
+                <div id="content_24" class="maininfo"></div>
+            </div>
+            <div id="content_3">
+                <div id="content_31" class="maininfo"></div>
+                <div id="content_32" class="maininfo"></div>
+                <div id="content_33" class="maininfo"></div>
+                <div id="content_34" class="maininfo"></div>
+            </div>
+            <div id="content_4">
+                <div id="content_41" class="maininfo"></div>
+                <div id="content_42" class="maininfo"></div>
+                <div id="content_43" class="maininfo"></div>
+                <div id="content_44" class="maininfo"></div>
+            </div>
+            <div id="content_5">
+                <div id="content_51" class="maininfo"></div>
+                <div id="content_52" class="maininfo"></div>
+                <div id="content_53" class="maininfo"></div>
+                <div id="content_54" class="maininfo"></div>
+            </div>
+            <div id="content_6">
+                <div id="content_61" class="maininfo"></div>
+                <div id="content_62" class="maininfo"></div>
+                <div id="content_63" class="maininfo"></div>
+                <div id="content_64" class="maininfo"></div>
+            </div>
+        </div>
+        <div id="right">
+            <div id="right_1">
+                <div id="right_11" class="maininfo"></div>
+                <div id="right_12" class="maininfo"></div>
+                <div id="right_13" class="maininfo"></div>
+                <div id="right_14" class="maininfo"></div>
+            </div>
+            <div id="right_2">
+                <div id="right_21" class="maininfo"></div>
+                <div id="right_22" class="maininfo"></div>
+                <div id="right_23" class="maininfo"></div>
+                <div id="right_24" class="maininfo"></div>
+            </div>
+            <div id="right_3">
+                <div id="right_31" class="maininfo"></div>
+                <div id="right_32" class="maininfo"></div>
+                <div id="right_33" class="maininfo"></div>
+                <div id="right_34" class="maininfo"></div>
+            </div>
+            <div id="right_4">
+                <div id="right_41" class="maininfo"></div>
+                <div id="right_42" class="maininfo"></div>
+                <div id="right_43" class="maininfo"></div>
+                <div id="right_44" class="maininfo"></div>
+            </div>
+            <div id="right_5">
+                <div id="right_51" class="maininfo"></div>
+                <div id="right_52" class="maininfo"></div>
+                <div id="right_53" class="maininfo"></div>
+                <div id="right_54" class="maininfo"></div>
+            </div>
+            <div id="right_6">
+                <div id="right_61" class="maininfo"></div>
+                <div id="right_62" class="maininfo"></div>
+                <div id="right_63" class="maininfo"></div>
+                <div id="right_64" class="maininfo"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer_1">
+                <div id="footer_11" class="maininfo"></div>
+                <div id="footer_12" class="maininfo"></div>
+                <div id="footer_13" class="maininfo"></div>
+                <div id="footer_14" class="maininfo"></div>
+            </div>
+            <div id="footer_2">
+                <div id="footer_21" class="maininfo"></div>
+                <div id="footer_22" class="maininfo"></div>
+                <div id="footer_23" class="maininfo"></div>
+                <div id="footer_24" class="maininfo"></div>
+            </div>
+            <div id="footer_3">
+                <div id="footer_31" class="maininfo"></div>
+                <div id="footer_32" class="maininfo"></div>
+                <div id="footer_33" class="maininfo"></div>
+                <div id="footer_34" class="maininfo"></div>
+            </div>
+            <div id="footer_4">
+                <div id="footer_41" class="maininfo"></div>
+                <div id="footer_42" class="maininfo"></div>
+                <div id="footer_43" class="maininfo"></div>
+                <div id="footer_44" class="maininfo"></div>
+            </div>
+            <div id="footer_5">
+                <div id="footer_51" class="maininfo"></div>
+                <div id="footer_52" class="maininfo"></div>
+                <div id="footer_53" class="maininfo"></div>
+                <div id="footer_54" class="maininfo"></div>
+            </div>
+            <div id="footer_6">
+                <div id="footer_61" class="maininfo"></div>
+                <div id="footer_62" class="maininfo"></div>
+                <div id="footer_63" class="maininfo"></div>
+                <div id="footer_64" class="maininfo"></div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="div_1.js"></script>
+    <script src="taokhoi.js"></script>
+    <script src="control.js"></script>
+    <script>
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="List_Phim_Duoi.css">
+    <link rel="stylesheet" href="List_Phim_Tren.css">
+    <link rel="stylesheet" href="menu.css">
+    
+
+
+</head>
+
+<body>
+
+   
+     <div class="buttonPhim">
+        <input id="buttonPhimLe" type="button" value="Phim lẻ" onclick="contro_list(1)">
+        <input id="buttonPhimBo" type="button" value="Phim bộ" onclick="contro_list(2)">
+    </div>
+    <div id="phim"></div>
+    </div> 
+    <div id="menu">
+            <ul>
+               <li><a href="#">PHIM MỚI</a></li>
+               <li><a href="#">THỂ LOẠI</a>
+                  <ul class="sem">
+                     <div>
+                        <li><a href="#">Sem ẾCH</a></li>
+                        <li><a href="#">Phim hành động</a></li>
+                        <li><a href="#">Phim viễn tưởng</a></li>
+                        <li><a href="#">Phim Chiến tranh</a></li>
+                        <li><a href="#">Phim Hình sự</a></li>
+                        <li><a href="#">Phim Phiêu lưu</a></li>
+                        <li><a href="#">Phim Hài Hước</a></li>
+                        <li><a href="#">Phim Võ thuật</a></li>
+                        <li><a href="#">Phim Kinh dị</a></li>
+                        <li><a href="#">Phim Hồi hộp</a></li>
+                        <li><a href="#">Phim Bí ẩn</a></li>
+                        <li><a href="#">Phim Thần thoại</a></li>
+                     </div>
+                  </ul>
+               </li>
+               <li><a href="#">QUỐC GIA </a>
+                  <ul class="sem">
+                     <li><a href="#">Việt Nam </a></li>
+                     <li><a href="#">Lào</a></li>
+                     <li><a href="#">Thái lan</a></li>
+                     <li><a href="#">Triều tiên</a></li>
+                     <li><a href="#">Nam Phi</a></li>
+                     <li><a href="#">Nam Mỹ</a></li>
+                     <li><a href="#">Thái lậu</a></li>
+                     <li><a href="#">Hàn xẻng</a></li>
+                  </ul>
+               </li>
+               <li><a href="#">PHIM LẺ</a></li>
+               <li><a href="#">PHIM BỘ</a></li>
+               <li><a style="width : 200px" href="#">THUYẾT MINH</a></li>
+               <li><a href="#">CHIẾU RẠP</a></li>
+               <li><a style="width : 200px" href="#">PHIM TRALER</a></li>
+               <li><a href="#">TOP IMDB</a></li>
+      
+      
+            </ul>
+         </div> 
+
+
+         
+         <!-- <div style="float:left" class="buttonTren">
+               <div id="phim1"></div>
+               <div><input id="Before" type="button" value="Quay lại" onclick="contro_list(3)"></div>
+               <div><input id="Next" type="button" value="Phía trước" onclick="contro_list(4)"></div>
+       
+           </div>
+
+    <script src="control_list_Tren.js"></script>
+   <script src="create_List_Tren.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+
+   <script src="control_list_duoi.js"></script>
+    <script src="data.js"></script>
+   <script>
+      
+      let i;
+let txt="<div class='list_phim_duoi'><ul>";
+    
+for (i=0;i<data.phim.length;i++){
+    txt += "<a href='google.com'>";
+    if (data.phim[i].style==="phim lẻ")
+        txt +="<div class='list_phim_le'> <li>";
+    else
+        txt +="<div class='list_phim_bo'> <li>";
+    txt += "<div class = 'list_phim_src'>"; 
+    txt += "<img src='" + data.phim[i].src +  "'></div>";
+    txt += "<div class = 'list_phim_content'>";
+    txt += "<div class = 'list_phim_nameVn'>";
+    txt += "<span>" +  data.phim[i].nameVN +  "</span></div>";
+    txt += "<div class = 'list_phim_nameEng'>";
+    txt += "<span>" +  data.phim[i].nameEng +  "</span></div>";
+    if (data.phim[i].style==="phim lẻ"){
+       txt += "<div class = 'list_phim_time'>";
+        txt += "<span>" +  data.phim[i].time +  "</span></div>";
+    }
+    else{
+        txt += "<div class = 'list_phim_part'>";
+        txt += "<span>" +  data.phim[i].part +  "</span></div>";
+    }
+    txt += "</div>" ;
+    txt += "</li>";
+    txt += "</div>"
+}
+    txt += "</ul>";
+    txt += "</div>"
+    document.getElementById("phim").innerHTML =txt;
+
+  </script>
+ 
+
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+ .buttonPhim {
+            position: relative;
+            left: 200px;
+            width: 300px;
+
+        }
+
+        #buttonPhimLe {
+            width: 150px;
+            position: relative;
+            float: left;
+            background-color: #1f1f1f;
+            outline: none;
+            color: #46E1FF;
+        }
+
+        #buttonPhimBo {
+            width: 150px;
+            position: relative;
+            float: right;
+            background-color: #1f1f1f;
+            outline: none;
+            color: #46E1FF;
+        }
+
+        ul {
+            margin-top: 0px;
+            margin-left: -38px;
+            list-style-type: none;
+        }
+
+        .list-phim-le {
+            clear: both;
+            border-bottom: 1px dashed #555;
+            background-color: #4F4E52;
+
+        }
+
+        .list-phim-bo {
+            clear: both;
+            background-color: #4F4E52;
+        }
+
+        .list_phim_src {
+            float: left;
+            width: 35px;
+            height: 35px;
+        }
+        .list_phim_src> img {
+            float: left;
+            width: 35px;
+            height: 35px;
+        }
+
+        .list_phim_content {
+            float: left;
+            color: #ddd;
+            width: 260px;
+            height: 35px;
+            background-color: #1f1f1f;
+            border-bottom: 1px solid grey;
+        }
+
+        .list_phim_nameVn {
+            line-height: 22px;
+            float: left;
+            color: #ddd;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .list_phim_nameEng {
+
+            float: left;
+            clear: both;
+            color: #ddd;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .list_phim_time {
+            float: right;
+            color: #ddd;
+            font-size: 12px;
+            color: #666;
+            /* clear: both; */
+        }
+        .list_phim_part {
+            float: right;
+            color: #ddd;
+            font-size: 12px;
+            color: #666;
+            /* clear: both; */
+        }
+
+        .list_phim_nameVn:hover {
+            color: #dacb46;
+
+        }
+
+
+        #phim {
+            position: relative;
+            left: 200px;
+            background-color: gray;
+            width: 300px;
+            max-height: 410.5px;
+            overflow: hidden;
+        }
+
+
+
+        body {
+
+
+            padding: 0px;
+        }

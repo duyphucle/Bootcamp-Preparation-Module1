@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<!-- saved from url=(0101)file:///C:/Users/Admin/Desktop/BOOTCAMP-MODULE-1/HTML%20CSS/Tao%20bo%20cuc%20co%20ban/case_study.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu-phim.css">
+    <link rel="stylesheet" href="content_1.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="menu_ngang_2.css"> -->
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="pain">
+        <!-- <p>Link hướng dẫn - sẽ được xóa sau khi nhấn "Chỉ nhấn khi hoàn thành xong" </p>
+        <p>https://drive.google.com/file/d/1QrfSgc2MYFIaZ8as0375dQycTIxn72Np/view?usp=sharing"</p> -->
+        <table>
+            <caption> <a style="background-color: #4CAF50;color:#fff;font-size: 23px"> <b>Tạo khối cùng CodeGym - Học
+                        viên:Lê Duy Phúc</b></a></caption>
+            <tbody>
+                <tr>
+                    <td><input id="width" value="100%" style="width:90px">Rộng <br></td>
+                    <td><input id="height" value="100px" style="width:90px">Cao</td>
+                    <td>
+                        <select id="bgColor" style="width:190px">
+                            <option style="background-color: #FF6F61" value="#FF6F61">Color</option>
+                            <option style="background-color: #6B5B95" value="#6B5B95"></option>
+                            <option style="background-color: #9B1B30" value="#9B1B30"></option>
+                            <option style="background-color: #77212E" value="#77212E"></option>
+                            <option style="background-color: #FA9A85" value="#FA9A85"></option>
+                            <option style="background-color: #935529" value="#935529"></option>
+                            <option style="background-color: #E08119" value="#E08119"></option>
+                            <option style="background-color: #2A4B7C" value="#2A4B7C"></option>
+                            <option style="background-color: #F3E0BE" value="#F3E0BE"></option>
+                            <option style="background-color: #2A293E" value="#2A293E"></option>
+                            <option style="background-color: #F96714" value="#F96714"></option>
+                            <option style="background-color: #264E36" value="#264E36"></option>
+                            <option style="background-color: #F3E0BE" value="#F3E0BE"></option>
+                            <option style="background-color: #2A293E" value="#2A293E"></option>
+                            <option style="background-color: #9F9C99" value="#9F9C99"></option>
+                            <option style="background-color: #797B3A" value="#797B3A"></option>
+                            <option style="background-color: #DD4132" value="#DD4132"></option>
+                            <option style="background-color: #9E1030" value="#9E1030"></option>
+                            <option style="background-color: #FE840E" value="#FE840E"></option>
+                            <option style="background-color: #FF6F61" value="#FF6F61"></option>
+                            <option style="background-color: #C62168" value="#C62168"></option>
+                            <option style="background-color: #8D9440" value="#8D9440"></option>
+                            <option style="background-color: #FFD662" value="#FFD662"></option>
+                        </select>
+                    </td>
+                    <td><input type="checkbox" id="fixed1" value="1">Cố định</td>
+
+                    <td>
+                        <select id="head_0" style="width:120px" onchange="drawHead()">
+                            <option id="click1" style="width:90px">HEAD</option>
+                            <option id="click1" style="width:90px">main</option>
+                            <option id="click1" style="width:90px">head</option>
+                            <option id="click1" style="width:90px">head_1</option>
+                            <option id="click1" style="width:90px">head_2</option>
+                            <option id="click1" style="width:90px">head_3</option>
+                            <option id="click1" style="width:90px">head_4</option>
+                            <option id="click1" style="width:90px">head_5</option>
+                            <option id="click1" style="width:90px">head_6</option>
+                            <option id="click1" style="width:90px">head_11</option>
+                            <option id="click1" style="width:90px">head_12</option>
+                            <option id="click1" style="width:90px">head_13</option>
+                            <option id="click1" style="width:90px">head_14</option>
+                            <option id="click1" style="width:90px">head_21</option>
+                            <option id="click1" style="width:90px">head_22</option>
+                            <option id="click1" style="width:90px">head_23</option>
+                            <option id="click1" style="width:90px">head_24</option>
+                            <option id="click1" style="width:90px">head_31</option>
+                            <option id="click1" style="width:90px">head_32</option>
+                            <option id="click1" style="width:90px">head_33</option>
+                            <option id="click1" style="width:90px">head_34</option>
+                            <option id="click1" style="width:90px">head_41</option>
+                            <option id="click1" style="width:90px">head_42</option>
+                            <option id="click1" style="width:90px">head_43</option>
+                            <option id="click1" style="width:90px">head_44</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="headlink_0" style="width:120px" onchange="drawHeadLink()">
+                            <option id="click1" style="width:90px">HEADLINK</option>
+                            <option id="click1" style="width:90px">headlink</option>
+                            <option id="click1" style="width:90px">headlink_1</option>
+                            <option id="click1" style="width:90px">headlink_2</option>
+                            <option id="click1" style="width:90px">headlink_3</option>
+                            <option id="click1" style="width:90px">headlink_4</option>
+                            <option id="click1" style="width:90px">headlink_5</option>
+                            <option id="click1" style="width:90px">headlink_6</option>
+                            <option id="click1" style="width:90px">headlink_11</option>
+                            <option id="click1" style="width:90px">headlink_12</option>
+                            <option id="click1" style="width:90px">headlink_13</option>
+                            <option id="click1" style="width:90px">headlink_14</option>
+                            <option id="click1" style="width:90px">headlink_21</option>
+                            <option id="click1" style="width:90px">headlink_22</option>
+                            <option id="click1" style="width:90px">headlink_23</option>
+                            <option id="click1" style="width:90px">headlink_24</option>
+                            <option id="click1" style="width:90px">headlink_31</option>
+                            <option id="click1" style="width:90px">headlink_32</option>
+                            <option id="click1" style="width:90px">headlink_33</option>
+                            <option id="click1" style="width:90px">headlink_34</option>
+                            <option id="click1" style="width:90px">headlink_41</option>
+                            <option id="click1" style="width:90px">headlink_42</option>
+                            <option id="click1" style="width:90px">headlink_43</option>
+                            <option id="click1" style="width:90px">headlink_44</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="left_0" style="width:120px" onchange="drawLeft()">
+                            <option id="click1" style="width:90px">LEFT</option>
+                            <option id="click1" style="width:90px">left</option>
+                            <option id="click1" style="width:90px">left_1</option>
+                            <option id="click1" style="width:90px">left_2</option>
+                            <option id="click1" style="width:90px">left_3</option>
+                            <option id="click1" style="width:90px">left_4</option>
+                            <option id="click1" style="width:90px">left_11</option>
+                            <option id="click1" style="width:90px">left_12</option>
+                            <option id="click1" style="width:90px">left_13</option>
+                            <option id="click1" style="width:90px">left_14</option>
+                            <option id="click1" style="width:90px">left_21</option>
+                            <option id="click1" style="width:90px">left_22</option>
+                            <option id="click1" style="width:90px">left_23</option>
+                            <option id="click1" style="width:90px">left_24</option>
+                            <option id="click1" style="width:90px">left_31</option>
+                            <option id="click1" style="width:90px">left_32</option>
+                            <option id="click1" style="width:90px">left_33</option>
+                            <option id="click1" style="width:90px">left_34</option>
+                            <option id="click1" style="width:90px">left_41</option>
+                            <option id="click1" style="width:90px">left_42</option>
+                            <option id="click1" style="width:90px">left_43</option>
+                            <option id="click1" style="width:90px">left_44</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="content_0" style="width:120px" onchange="drawContent()">
+                            <option id="click1" style="width:90px">CONTENT</option>
+                            <option id="click1" style="width:90px">content</option>
+                            <option id="click1" style="width:90px">content_1</option>
+                            <option id="click1" style="width:90px">content_2</option>
+                            <option id="click1" style="width:90px">content_3</option>
+                            <option id="click1" style="width:90px">content_4</option>
+                            <option id="click1" style="width:90px">content_5</option>
+                            <option id="click1" style="width:90px">content_6</option>
+                            <option id="click1" style="width:90px">content_11</option>
+                            <option id="click1" style="width:90px">content_12</option>
+                            <option id="click1" style="width:90px">content_13</option>
+                            <option id="click1" style="width:90px">content_14</option>
+                            <option id="click1" style="width:90px">content_21</option>
+                            <option id="click1" style="width:90px">content_22</option>
+                            <option id="click1" style="width:90px">content_23</option>
+                            <option id="click1" style="width:90px">content_24</option>
+                            <option id="click1" style="width:90px">content_31</option>
+                            <option id="click1" style="width:90px">content_32</option>
+                            <option id="click1" style="width:90px">content_33</option>
+                            <option id="click1" style="width:90px">content_34</option>
+                            <option id="click1" style="width:90px">content_41</option>
+                            <option id="click1" style="width:90px">content_42</option>
+                            <option id="click1" style="width:90px">content_43</option>
+                            <option id="click1" style="width:90px">content_44</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="right_0" style="width:120px" onchange="drawRight()">
+                            <option id="click1" style="width:90px">RIGHT</option>
+                            <option id="click1" style="width:90px">right</option>
+                            <option id="click1" style="width:90px">right_1</option>
+                            <option id="click1" style="width:90px">right_2</option>
+                            <option id="click1" style="width:90px">right_3</option>
+                            <option id="click1" style="width:90px">right_4</option>
+                            <option id="click1" style="width:90px">right_5</option>
+                            <option id="click1" style="width:90px">right_6</option>
+                            <option id="click1" style="width:90px">right_11</option>
+                            <option id="click1" style="width:90px">right_12</option>
+                            <option id="click1" style="width:90px">right_13</option>
+                            <option id="click1" style="width:90px">right_14</option>
+                            <option id="click1" style="width:90px">right_21</option>
+                            <option id="click1" style="width:90px">right_22</option>
+                            <option id="click1" style="width:90px">right_23</option>
+                            <option id="click1" style="width:90px">right_24</option>
+                            <option id="click1" style="width:90px">right_31</option>
+                            <option id="click1" style="width:90px">right_32</option>
+                            <option id="click1" style="width:90px">right_33</option>
+                            <option id="click1" style="width:90px">right_34</option>
+                            <option id="click1" style="width:90px">right_41</option>
+                            <option id="click1" style="width:90px">right_42</option>
+                            <option id="click1" style="width:90px">right_43</option>
+                            <option id="click1" style="width:90px">right_44</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="footer_0" style="width:120px" onchange="drawFooter()">
+                            <option id="click1" style="width:90px">FOOTER</option>
+                            <option id="click1" style="width:90px">footer</option>
+                            <option id="click1" style="width:90px">footer_1</option>
+                            <option id="click1" style="width:90px">footer_2</option>
+                            <option id="click1" style="width:90px">footer_3</option>
+                            <option id="click1" style="width:90px">footer_4</option>
+                            <option id="click1" style="width:90px">footer_5</option>
+                            <option id="click1" style="width:90px">footer_6</option>
+                            <option id="click1" style="width:90px">footer_11</option>
+                            <option id="click1" style="width:90px">footer_12</option>
+                            <option id="click1" style="width:90px">footer_13</option>
+                            <option id="click1" style="width:90px">footer_14</option>
+                            <option id="click1" style="width:90px">footer_21</option>
+                            <option id="click1" style="width:90px">footer_22</option>
+                            <option id="click1" style="width:90px">footer_23</option>
+                            <option id="click1" style="width:90px">footer_24</option>
+                            <option id="click1" style="width:90px">footer_31</option>
+                            <option id="click1" style="width:90px">footer_32</option>
+                            <option id="click1" style="width:90px">footer_33</option>
+                            <option id="click1" style="width:90px">footer_34</option>
+                            <option id="click1" style="width:90px">footer_41</option>
+                            <option id="click1" style="width:90px">footer_42</option>
+                            <option id="click1" style="width:90px">footer_43</option>
+                            <option id="click1" style="width:90px">footer_44</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="Pro1" style="width:90px">
+                            <option value="update">Update</option>
+
+
+                        </select>
+                    </td>
+
+                    <!-- <td colspan="3"><button id="done" style="background-color:#4CAF50;color:white" onclick="draw(9)"
+                        ;><b>Chỉ nhấn khi hoàn thành xong</b></button></td> -->
+                </tr>
+
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <th style="background-color:teal" colspan="6">Font</th>
+                    <th style="background-color:teal" colspan="5">Paragraph</th>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <select id="font_Family" onchange="fontFamily()">
+                            <option value="Time New Roman">Time New Roman</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Verdana">Verdana </option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Lucida Console">Lucida Console</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="font_Size" style="width:50px" onchange="fontSize()">
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="26">26</option>
+                            <option value="30">30</option>
+                        </select>
+                    </td>
+                    <td><button id="font_Size_up" style="width:30px;background-color:aquamarine"
+                            onclick="fontSizeup()"><b>A+</b></button></td>
+                    <td><button id="font_Size_down" style="width:30px;background-color:aquamarine"
+                            onclick="fontSizedown()"><b>A-</b></button></td>
+                    <td><button id="list_Circle" style="background-color:aquamarine;line-height:0.7"
+                            onclick="listCircle()">o__<br>o__<br>o__<button< td=""> </button<></button></td>
+                    <td><button id="list_Numbering" style="width:30px;background-color:aquamarine;line-height:0.7"
+                            onclick="listNumbering()"><sup>1__<br>2__<br>3__</sup></button></td>
+                    <td><button id="list_None" style="width:30px;background-color:aquamarine;line-height:0.7"
+                            onclick="listNone()">__<br>__<br>__</button> </td>
+                    <td><input id="menu1" style="width:90px" value="PHIM MỚI"></td>
+                    <td><input id="menu2" style="width:70px" value="THỂ LOẠI"></td>
+                    <td><input id="menu3" style="width:70px" value="QUỐC GIA"></td>
+                    <td><input id="menu4" style="width:70px" value=" PHIM LẺ"></td>
+                    <td><input id="menu5" style="width:70px" value="PHIM BỘ">Tên Menu</td>
+
+                </tr>
+                <tr>
+                    <td><button id="font_bold" style="background-color:aquamarine;width:30px"
+                            onclick="fontBold()"><b>B</b></button></td>
+                    <td><button id="font_Italic" style="background-color:aquamarine;width:30px"
+                            onclick="fontItalic()"><i>I</i></button></td>
+                    <td><button id="font_Underline" style="background-color:aquamarine;width:30px"
+                            onclick="fontUnderline()"><u>U</u></button></td>
+                    <td colspan="2">
+                        <select id="font_Color" style="width:90px" onchange="fontColor()">
+                            <option style="background-color: #FF6F61" value="#FF6F61">Font Color</option>
+                            <option style="background-color: #6B5B95" value="#6B5B95"></option>
+                            <option style="background-color: #9B1B30" value="#9B1B30"></option>
+                            <option style="background-color: #77212E" value="#77212E"></option>
+                            <option style="background-color: #FA9A85" value="#FA9A85"></option>
+                            <option style="background-color: #935529" value="#935529"></option>
+                            <option style="background-color: #E08119" value="#E08119"></option>
+                            <option style="background-color: #2A4B7C" value="#2A4B7C"></option>
+                            <option style="background-color: #F3E0BE" value="#F3E0BE"></option>
+                            <option style="background-color: #2A293E" value="#2A293E"></option>
+                            <option style="background-color: #F96714" value="#F96714"></option>
+                            <option style="background-color: #264E36" value="#264E36"></option>
+                            <option style="background-color: #F3E0BE" value="#F3E0BE"></option>
+                            <option style="background-color: #2A293E" value="#2A293E"></option>
+                            <option style="background-color: #9F9C99" value="#9F9C99"></option>
+                            <option style="background-color: #797B3A" value="#797B3A"></option>
+                            <option style="background-color: #DD4132" value="#DD4132"></option>
+                            <option style="background-color: #9E1030" value="#9E1030"></option>
+                            <option style="background-color: #FE840E" value="#FE840E"></option>
+                            <option style="background-color: #FF6F61" value="#FF6F61"></option>
+                            <option style="background-color: #C62168" value="#C62168"></option>
+                            <option style="background-color: #8D9440" value="#8D9440"></option>
+                            <option style="background-color: #FFD662" value="#FFD662"></option>
+                        </select>
+                    </td>
+                    <td><button id="align_Text_left"><img src="align_text_left.png" onclick="alignTextleft()"></button>
+                    </td>
+                    <td><button id="align_Text_center"><img src="align_text_center.png"
+                                onclick="alignTextcenter()"></button></td>
+                    <td><button id="align_Text_right"><img src="align_text_right.png"
+                                onclick="alignTextright()"></button>
+                    </td>
+                    <td><button id="align_Text_justify"><img src="/align_text_justify.png"
+                                onclick="alignTextjustify()"></button></td>
+                    <!-- <td><button id="test" onclick="menuNgang(1)">Menu Ngang1</button></td>
+                    <td><button id="test" onclick="menuNgang(2)">Menu Ngang2</button></td>
+                    <td><button id="test" onclick="menuNgang(3)">Menu Ngang3</button></td>
+                    <td><button id="test" onclick="menuNgang(4)">Menu Ngang4</button></td> -->
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div id="main" style="top: 0px; position: relative; border: 1px solid green; width: 100%; height: 5000px;">
+        <div id="head" style="background-color: rgb(255, 111, 97); height: 200px; width: 100%;">
+            <div id="head_1" style="background-color: rgb(107, 91, 149); width: 100%; height: 75px;">
+                <div id="head_11" style="background-color: rgb(250, 154, 133); height: 65px; float: left;">head_11 Width
+                    : 348 Height: 65px</div>
+                <div id="head_12" style="background-color: rgb(224, 129, 25); width: 330px; height: 65px; float: left;">
+                    head_12 Width : 330px Height: 65px</div>
+                <div id="head_13" style="background-color: rgb(42, 75, 124); width: 330px; height: 65px; float: left;">
+                    head_13 Width : 330px Height: 65px</div>
+                <div id="head_14"
+                    style="background-color: rgb(24
+                    
+                    
+                    
+                    3, 224, 190); width: 330px; height: 65px; float: left;">head_14 Width
+                    : 330px Height: 65px</div>
+            </div>
+            <div id="head_2" style="background-color: rgb(155, 27, 48); width: 100%; height: 66px;">
+                <div id="menu">
+                    <ul>
+                        <li><a href="#">PHIM MỚI</a></li>
+                        <li style="backgrounsd-color: #323031"><a href="#">THỂ LOẠI</a>
+                            <ul class="sem">
+                                <div>
+                                    <li><a href="#">Sem ẾCH</a></li>
+                                    <li><a href="#">Phim hành động</a></li>
+                                    <li><a href="#">Phim viễn tưởng</a></li>
+                                    <li><a href="#">Phim Chiến tranh</a></li>
+                                    <li><a href="#">Phim Hình sự</a></li>
+                                    <li><a href="#">Phim Phiêu lưu</a></li>
+                                    <li><a href="#">Phim Hài Hước</a></li>
+                                    <li><a href="#">Phim Võ thuật</a></li>
+                                    <li><a href="#">Phim Kinh dị</a></li>
+                                    <li><a href="#">Phim Hồi hộp</a></li>
+                                    <li><a href="#">Phim Bí ẩn</a></li>
+                                    <li><a href="#">Phim Thần thoại</a></li>
+
+
+                                </div>
+                            </ul>
+                        </li>
+                        <li><a href="#">QUỐC GIA </a>
+                            <ul class="sem">
+                                <li><a href="#">Việt Nam </a></li>
+                                <li><a href="#">Lào</a></li>
+                                <li><a href="#">Thái lan</a></li>
+                                <li><a href="#">Triều tiên</a></li>
+                                <li><a href="#">Nam Phi</a></li>
+                                <li><a href="#">Nam Mỹ</a></li>
+                                <li><a href="#">Thái lậu</a></li>
+                                <li><a href="#">Hàn xẻng</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">PHIM LẺ</a></li>
+                        <li><a href="#">PHIM BỘ</a></li>
+                        <li><a style="width : 200px" href="#">THUYẾT MINH</a></li>
+                        <li><a href="#">CHIẾU RẠP</a></li>
+                        <li><a style="width : 200px" href="#">PHIM TRALER</a></li>
+                        <li><a href="#">TOP IMDB</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+            <div id="head_3" style="background-color: rgb(250, 154, 133); width: 100%; height: 65px;">
+                <div id="head_31"></div>
+                <div id="head_32"></div>
+                <div id="head_33"></div>
+                <div id="head_34"></div>
+            </div>
+            <div id="head_4">
+                <div id="head_41"></div>
+                <div id="head_42"></div>
+                <div id="head_43"></div>
+                <div id="head_44"></div>
+            </div>
+            <div id="head_5">
+                <div id="head_51"></div>
+                <div id="head_52"></div>
+                <div id="head_53"></div>
+                <div id="head_54"></div>
+            </div>
+            <div id="head_6">
+                <div id="head_61"></div>
+                <div id="head_62"></div>
+                <div id="head_63"></div>
+                <div id="head_64"></div>
+            </div>
+        </div>
+
+        <div id="headlink">
+            <div id="headlink_1" style="background-color: rgb(155, 27, 48); width: 1349px; height: 300px;">
+                <div id="headlink_11"
+                    style="background-color: rgb(155, 27, 48); width: 349px; height: 300px; float: left;">headlink_11
+                    Width : 349px Height: 300px
+                    <button onclick="nextPhim(1)">Quay lại</button></div>
+                <ul>
+
+                    <li>
+                        <div class="phimmoi" id="headlink_12" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/9427/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Kẻ du hành(phần 3)</h3>
+                            <h4 class="movie-name-2">Travelers (Season3)</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="phimmoi" id="headlink_13" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/9412/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Khi Hoa Trà Nở</h3>
+                            <h4 class="movie-name-2">When the Camellia Blooms</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="phimmoi" id="headlink_14" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/9425/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Bạn Trai Hiện Đại</h3>
+                            <h4 class="movie-name-2">Modern Couples</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="phimmoi" id="headlink_15" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/9305/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Bạn Trai Hiện Đại</h3>
+                            <h4 class="movie-name-2">Modern Couples</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="phimmoi" id="headlink_16" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/9305/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Hương Vị Yêu Thương</h3>
+                            <h4 class="movie-name-2">Kiss, Love And Taste</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="phimmoi" id="headlink_17" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/9258/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Tớ Đợi Cậu Ở Tương Lai</h3>
+                            <h4 class="movie-name-2">Waiting For You In The Future</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="phimmoi" id="headlink_18" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/162/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Thám tử lừng danh Conan</h3>
+                            <h4 class="movie-name-2">Detective Conan / Meitantei Conan / Case Close</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="phimmoi" id="headlink_19" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/9087/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Cực Hạn 17</h3>
+                            <h4 class="movie-name-2">Project 17</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="phimmoi" id="headlink_20" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/9449/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Chốn Bình Yên (Phần 4)</h3>
+                            <h4 class="movie-name-2">The Good Place (Season 4)</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="phimmoi" id="headlink_21" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/9448/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Đảo Hải Tặc: Hội Chợ Hải Tặc</h3>
+                            <h4 class="movie-name-2">One Piece Movie 14: Stampede</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="phimmoi" id="headlink_22" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/9235/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Công Chúa Hạt Cát</h3>
+                            <h4 class="movie-name-2">The Sand Princess</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="phimmoi" id="headlink_23" style="background-color: rgb(147, 85, 41);
+                        width: 225px; height: 300px; float: left;position: relative;">
+                            <img style="width: 225px; height: 300px"
+                                src="http://image.phimmoi.net/film/2504/poster.thumb.jpg">
+                            </img>
+                            <h3 class="movie-name-1">Pokemon (Phần 2)</h3>
+                            <h4 class="movie-name-2">Pokémon 2 (Pocket Monsters 2)</h4>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <button onclick="nextPhim(2)">Next</button>
+            </div>
+            <div id="headlink_2">
+                <div id="headlink_21"></div>
+                <div id="headlink_22"></div>
+                <div id="headlink_23"></div>
+                <div id="headlink_24"></div>
+            </div>
+            <div id="headlink_3">
+                <div id="headlink_31"></div>
+                <div id="headlink_32"></div>
+                <div id="headlink_33"></div>
+                <div id="headlink_34"></div>
+            </div>
+            <div id="headlink_4">
+                <div id="headlink_41"></div>
+                <div id="headlink_42"></div>
+                <div id="headlink_43"></div>
+                <div id="headlink_44"></div>
+            </div>
+            <div id="headlink_5">
+                <div id="headlink_51"></div>
+                <div id="headlink_52"></div>
+                <div id="headlink_53"></div>
+                <div id="headlink_54"></div>
+            </div>
+            <div id="headlink_6">
+                <div id="headlink_61"></div>
+                <div id="headlink_62"></div>
+                <div id="headlink_63"></div>
+                <div id="headlink_64"></div>
+            </div>
+        </div>
+
+        <div id="left" style="background-color: rgb(42, 75, 124); width: 349px; height: 3780px; float: left;">
+            <div id="left_1">
+                <div id="left_11"></div>
+                <div id="left_12"></div>
+                <div id="left_13"></div>
+                <div id="left_14"></div>
+            </div>
+            <div id="left_2">
+                <div id="left_21"></div>
+                <div id="left_22"></div>
+                <div id="left_23"></div>
+                <div id="left_24"></div>
+            </div>
+            <div id="left_3">
+                <div id="left_31"></div>
+                <div id="left_32"></div>
+                <div id="left_33"></div>
+                <div id="left_34"></div>
+            </div>
+            <div id="left_4">
+                <div id="left_41"></div>
+                <div id="left_42"></div>
+                <div id="left_43"></div>
+                <div id="left_44"></div>
+            </div>
+            <div id="left_5">
+                <div id="left_51"></div>
+                <div id="left_52"></div>
+                <div id="left_53"></div>
+                <div id="left_54"></div>
+            </div>
+            <div id="left_6">
+                <div id="left_61"></div>
+                <div id="left_62"></div>
+                <div id="left_63"></div>
+                <div id="left_64"></div>
+            </div>
+        </div>
+        <div id="content" style="background-color: rgb(158, 16, 48); width: 670px; height: 3780px; float: left;">
+            <div id="content_1"  style="width: 670px; height: 600px;">
+                <div id="content_11"
+                    style="background-color: rgb(243, 224, 190); width: 35%; height: 559px; float: left;">
+                    <p>Quảng cáo</p>
+                </div>
+                <div id="content_12" style="background-color: rgb(255, 111, 97); width: 400px; height: 559px; float: left;">
+                        <ul>
+                            <li><a href="#">PHIM MỚI</a></li>
+                            <li><a href="#">PHIM BỘ</a></li>
+                            <li><a style ="width:150px" href="#">PHIM BỘ FULL</a></li>
+                </div>
+             
+                   
+                </div>
+                <div id="content_2" style="background-color: rgb(224, 129, 25); width: 660px; height: 626.69px;">
+                    <div id="content_21"
+                        style="background-color: rgb(121, 123, 58); width: 24%; float: left; height: 50%;">
+                        content_21 Width : 24% Height: 50%</div>
+                    <div id="content_22"
+                        style="background-color: rgb(121, 123, 58); width: 24%; height: 50%; float: left;">
+                        content_22 Width : 24% Height: 50%</div>
+                    <div id="content_23"
+                        style="background-color: rgb(121, 123, 58); width: 24%; height: 50%; float: left;">
+                        content_23 Width : 24% Height: 50%</div>
+                    <div id="content_24"
+                        style="background-color: rgb(121, 123, 58); width: 24%; height: 50%; float: left;">
+                        content_24 Width : 24% Height: 50%</div>
+                </div>
+                <div id="content_3" style="background-color: rgb(121, 123, 58); width: 100%; height: 626px;">
+                    <div id="content_31"
+                        style="background-color: rgb(198, 33, 104); width: 24%; height: 300px; float: left;">content_31
+                        Width : 24% Height: 300px</div>
+                    <div id="content_32"
+                        style="background-color: rgb(198, 33, 104); width: 24%; height: 300px; float: left;">content_32
+                        Width : 24% Height: 300px</div>
+                    <div id="content_33"
+                        style="background-color: rgb(198, 33, 104); width: 24%; height: 300px; float: left;">content_33
+                        Width : 24% Height: 300px</div>
+                    <div id="content_34"
+                        style="background-color: rgb(198, 33, 104); width: 24%; height: 300px; float: left;">content_34
+                        Width : 24% Height: 300px</div>
+                </div>
+                <div id="content_4" style="background-color: rgb(198, 33, 104); width: 100%; height: 700px;">
+                    <div id="content_41"></div>
+                    <div id="content_42"></div>
+                    <div id="content_43"></div>
+                    <div id="content_44"></div>
+                </div>
+                <div id="content_5">
+                    <div id="content_51"></div>
+                    <div id="content_52"></div>
+                    <div id="content_53"></div>
+                    <div id="content_54"></div>
+                </div>
+                <div id="content_6">
+                    <div id="content_61"></div>
+                    <div id="content_62"></div>
+                    <div id="content_63"></div>
+                    <div id="content_64"></div>
+                </div>
+            </div>
+            <div id="right" style="background-color: rgb(255, 214, 98); width: 310px; height: 3780px; float: right;">
+                <div id="right_1" style="background-color: rgb(254, 132, 14); width: 100%; height: 600px;">
+                    <div id="right_11"></div>
+                    <div id="right_12"></div>
+                    <div id="right_13"></div>
+                    <div id="right_14"></div>
+                </div>
+                <div id="right_2" style="background-color: rgb(255, 111, 97); width: 100%; height: 600px;">
+                    <div id="right_21"></div>
+                    <div id="right_22"></div>
+                    <div id="right_23"></div>
+                    <div id="right_24"></div>
+                </div>
+                <div id="right_3" style="background-color: rgb(221, 65, 50); width: 100%; height: 600px;">
+                    <div id="right_31"></div>
+                    <div id="right_32"></div>
+                    <div id="right_33"></div>
+                    <div id="right_34"></div>
+                </div>
+                <div id="right_4" style="background-color: rgb(224, 129, 25); width: 100%; height: 600px;">
+                    <div id="right_41"></div>
+                    <div id="right_42"></div>
+                    <div id="right_43"></div>
+                    <div id="right_44"></div>
+                </div>
+                <div id="right_5">
+                    <div id="right_51"></div>
+                    <div id="right_52"></div>
+                    <div id="right_53"></div>
+                    <div id="right_54"></div>
+                </div>
+                <div id="right_6">
+                    <div id="right_61"></div>
+                    <div id="right_62"></div>
+                    <div id="right_63"></div>
+                    <div id="right_64"></div>
+                </div>
+            </div>
+            <div id="footer" style="background-color: rgb(141, 148, 64); height: 234px; clear: both;">
+                <div id="footer_1">
+                    <div id="footer_11"></div>
+                    <div id="footer_12"></div>
+                    <div id="footer_13"></div>
+                    <div id="footer_14"></div>
+                </div>
+                <div id="footer_2">
+                    <div id="footer_21"></div>
+                    <div id="footer_22"></div>
+                    <div id="footer_23"></div>
+                    <div id="footer_24"></div>
+                </div>
+                <div id="footer_3">
+                    <div id="footer_31"></div>
+                    <div id="footer_32"></div>
+                    <div id="footer_33"></div>
+                    <div id="footer_34"></div>
+                </div>
+                <div id="footer_4">
+                    <div id="footer_41"></div>
+                    <div id="footer_42"></div>
+                    <div id="footer_43"></div>
+                    <div id="footer_44"></div>
+                </div>
+                <div id="footer_5">
+                    <div id="footer_51"></div>
+                    <div id="footer_52"></div>
+                    <div id="footer_53"></div>
+                    <div id="footer_54"></div>
+                </div>
+                <div id="footer_6">
+                    <div id="footer_61"></div>
+                    <div id="footer_62"></div>
+                    <div id="footer_63"></div>
+                    <div id="footer_64"></div>
+                </div>
+
+            </div>
+
+        </div>
+        <script src="./phimmoi_files/div_1.js.tải xuống"></script>
+        <script src="./phimmoi_files/taokhoi.js.tải xuống"></script>
+        <script>
+
+
+            //Nguyen tắc đặt tên:
+            // Biến = fsize
+            // id= f_Family 
+            //Hàm: fontFamily()
+            var fsize = document.getElementById("font_Size")
+            var check = true;
+
+            function fontFamily() {
+                let fontFamily = document.getElementById("font_Family").value
+                document.getElementById("head_11").style.fontFamily = fontFamily;
+            }
+            function fontSize() {
+
+                document.getElementById("head_11").style.fontSize = fsize.value + "px";
+            }
+            function fontSizeup() {
+                //Can parseInt vì hàm này .value  không trả về giá trị số
+                fsize.value = parseInt(fsize.value) + 2;
+                document.getElementById("head_11").style.fontSize = fsize.value + "px";
+            }
+            function fontSizedown() {
+                fsize.value = parseInt(fsize.value) - 2;
+                document.getElementById("head_11").style.fontSize = fsize.value + "px";
+            }
+            function listCircle() {
+                //Link DOM list :https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_style_liststyletype2 
+                document.getElementById("head_11").style.listStyleType = "circle"
+            }
+            function listNumbering() {
+
+                document.getElementById("head_11").style.listStyleType = "decimal"
+            }
+            function listNone() {
+                document.getElementById("head_11").style.listStyleType = "none"
+            }
+            function fontBold() {
+                //Cần phá triển thêm khi nhấn B thì thường. Hoặc chọn khu vực
+                //txt la biến toàn cục nên nó sẽ nhận giá trị của fbold
+                fbold = document.getElementById("head_11");
+                let txt = document.getElementById("head_11").innerHTML
+                if (check) {
+                    fbold.innerHTML = "<b>" + txt + "</b>";
+                    check = false
+                }
+                else {
+                    txt = txt.replace("<b>", "")
+                    txt = txt.replace("</b>", "")
+                    fbold.innerHTML = txt
+                    check = true;
+                }
+            }
+            function fontItalic() {
+                fbold = document.getElementById("head_11");
+                let txt = document.getElementById("head_11").innerHTML
+                if (check) {
+                    fbold.innerHTML = "<i>" + txt + "</i>";
+                    check = false
+                }
+                else {
+                    txt = txt.replace("<i>", "")
+                    txt = txt.replace("</i>", "")
+                    fbold.innerHTML = txt
+                    check = true;
+                }
+            }
+            function fontUnderline() {
+                fbold = document.getElementById("head_11");
+                let txt = document.getElementById("head_11").innerHTML
+                if (check) {
+                    fbold.innerHTML = "<u>" + txt + "</u>";
+                    check = false
+                }
+                else {
+                    txt = txt.replace("<u>", "")
+                    txt = txt.replace("</u>", "")
+                    fbold.innerHTML = txt
+                    check = true;
+                }
+            }
+            function fontColor() {
+                let fontColor = document.getElementById("font_Color").value
+                document.getElementById("head_11").style.color = fontColor;
+            }
+            function alignTextleft() {
+                document.getElementById("head_11").style.textAlign = "left";
+            }
+            function alignTextcenter() {
+                document.getElementById("head_11").style.textAlign = "center";
+            }
+            function alignTextright() {
+                document.getElementById("head_11").style.textAlign = "right";
+            }
+            function alignTextjustify() {
+                document.getElementById("head_11").style.textAlign = "justify";
+            }
+            function switchStyle(f) {
+                var linkElement = document.createElement('link');
+                linkElement.setAttribute('rel', 'stylesheet');
+                linkElement.setAttribute('href', f);
+                document.getElementsByTagName('head')[0].innerHTML = "";
+                document.getElementsByTagName('head')[0].appendChild(linkElement);
+            }
+            let arr = []
+
+
+            function menuNgang(value) {
+                let txt = "<nav>"
+                arr[0] = document.getElementById("menu1").value
+                arr[1] = document.getElementById("menu2").value
+                arr[2] = document.getElementById("menu3").value
+                arr[3] = document.getElementById("menu4").value
+                arr[4] = document.getElementById("menu5").value
+                switch (value) {
+                    case 1:
+
+                        for (let i = 0; i < arr.length; i++) {
+                            txt += "<a href='1'>" + arr[i] + "</a>"
+                        }
+
+                        txt += "<div class='animation start-home'></div>"
+                        txt += "</nav>"
+                        document.getElementById("head_2").innerHTML = txt;
+                        switchStyle('menu_ngang_1.css');
+                        break;
+                    case 2:
+                        txt = '<nav class="skew-menu">'
+                        txt += "   <ul>"
+                        for (let i = 0; i < arr.length; i++) {
+                            txt += " <li><a href='1'>" + arr[i] + "</a></li>";
+                        }
+                        txt += "<ul>"
+                        txt += "</nav>"
+
+                        document.getElementById("head_2").innerHTML = txt;
+                        switchStyle('menu_ngang_2.css');
+                        break;
+                    case 3:
+                        txt = ' <nav class="stroke">'
+                        txt += ' <ul> '
+                        for (let i = 0; i < arr.length; i++) {
+                            txt += " <li><a href='1'>" + arr[i] + "</a></li>";
+                        }
+                        txt += "<ul>"
+                        txt += "</nav'>"
+                        document.getElementById("head_2").innerHTML = txt;
+                        switchStyle('menu_ngang_3.css');
+                        break;
+                    case 4:
+                        txt = '<nav class="skew-menu">'
+                        txt += "   <ul>"
+                        for (let i = 0; i < arr.length; i++) {
+                            txt += " <li><a href='1'>" + arr[i] + "</a></li>";
+                        }
+
+                        txt += "<ul>"
+                        txt += "</nav>"
+
+                        document.getElementById("head_2").innerHTML = txt;
+                        switchStyle('menu_ngang_4.css');
+                        break;
+                }
+            }
+
+
+
+        </script>
+
+        <script>
+            let t = 2;
+            let x = document.getElementsByClassName("phimmoi");
+            for (i = 3; i < x.length; i++)
+                x[i].style.display = "none";
+
+            function nextPhim(value) {
+                switch (value) {
+                    case 1:
+                        for (i = 0; i < x.length; i++)
+                            x[i].style.display = "none";
+
+                        x[t].style.display = "block";
+                        x[t + 1].style.display = "block";
+                        x[t + 2].style.display = "block";
+                        t += 2;
+
+                        if (t == 10)
+                            t = 0;
+                        break;
+
+                    case 2:
+                        t -= 2;
+                        if (t == 0)
+                            t = 10;
+
+                        for (i = 0; i < x.length; i++)
+                            x[i].style.display = "none";
+
+                        x[t].style.display = "block";
+                        x[t - 1].style.display = "block";
+                        x[t - 2].style.display = "block";
+
+
+                        break;
+                }
+            }
+
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+.buttonTren{
+    position: relative;
+}
+#Before {
+    position: absolute;
+    top:100px;
+    left:80px;
+    float: left;
+}
+#Next {
+    position: absolute;
+    top:100px;
+    left:1200px;
+    float: left;
+}
+
+.list_phim_le1{
+    padding: 10px;
+    float:left;
+    position: relative;
+    width: 225px;
+    height: 300px;
+}
+
+.list_phim_tren{
+    float: left;
+    width: 10835px;
+    height: 300px;
+    /* max-width: 765px; */
+}
+.list_phim_tren1{
+    width: 980px;
+    height: 300px;
+    /* max-width: 765px; */
+}
+.list_phim_src1> img {
+    width: 225px;
+    height: 300px;
+ 
+}
+.list_phim_nameVn1{
+    top:30px;
+    left:50px;
+    position: absolute;
+   
+}
+.list_phim_nameEng1{
+    top:180px;
+    left:80px;
+    position: absolute;
+    
+}
+ul {
+    margin-top: 0px;
+    list-style-type: none;
+}
+#phim1 {
+    position: relative;
+    left: 100px;
+    background-color: gray;
+   
+    max-width: 1025px;
+    overflow: hidden;
+}
